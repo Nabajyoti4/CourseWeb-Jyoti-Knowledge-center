@@ -1,0 +1,636 @@
+.container-fluid.main{
+    position: relative; /* To make the navbar positions relative to this container */
+    padding: 0;
+}
+
+.carousel .background {
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+@media (max-width:991px) {
+    .carousel .background {
+        background-size: cover; /* To make the background image looks good */
+    }
+}
+
+.carousel .background.a {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.pexels.com/photos/92090/pexels-photo-92090-large.jpeg");
+}
+
+.carousel .background.b {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.pexels.com/photos/93750/pexels-photo-93750-large.jpeg");
+}
+
+.carousel .background.c {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.pexels.com/photos/76827/bahia-ocean-bay-boat-76827-large.jpeg");
+}
+
+.carousel-fade .carousel-inner .item {
+    opacity: 0;
+    transition: opacity 0.5s; /* The 0.5s describes the duration to make the opacity from 0 to 1 */
+}
+
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+
+/* CSS Hack to trigger GPU for smooth transition */
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+/* CSS Hack to trigger GPU for smooth transition */
+
+.covertext {
+    position: absolute; /* To make the div to be place anywhere. It is out of the document flow */
+    top: 200px; /* The distance between the div with the top of document */
+    left: 0px; /* Make the div full width */
+    right: 0px; /* Make the div full width */
+}
+
+.title {
+    font-family: Verdana;
+    font-weight: 600;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.nav-name{
+    font-family: Verdana;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.subtitle {
+    font-family: Verdana;
+    font-size: 23px;
+    color: #ffffff;
+    text-align: center;
+}
+
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.section-bg {
+    background-color: #d9d9d9;
+}
+
+.section-title {
+    padding-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+}
+
+.section-title p::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: #9ae1af;
+    margin: 4px 10px;
+}
+
+.section-title p {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #37423b;
+}
+
+.about .content h3 {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.about .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about .content ul li {
+    padding-bottom: 10px;
+}
+
+.about .content ul i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: #5fcf80;
+}
+
+.about .content .learn-more-btn {
+    background: #5fcf80;
+    color: #fff;
+    border-radius: 50px;
+    padding: 8px 25px 9px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.about .content .learn-more-btn:hover {
+    background: #3ac162;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .about .content .learn-more-btn {
+        margin: 0 48px 0 0;
+        padding: 6px 18px;
+    }
+}
+
+
+/**
+services
+ */
+.service .content {
+    padding: 30px;
+    background: #5fcf80;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.service .content h3 {
+    font-weight: 700;
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.service .content p {
+    margin-bottom: 30px;
+}
+
+.service .content .more-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 30px 8px 30px;
+    color: #fff;
+    border-radius: 50px;
+    transition: all ease-in-out 0.4s;
+}
+
+.service .content .more-btn i {
+    font-size: 14px;
+}
+
+.service .content .more-btn:hover {
+    color: #5fcf80;
+    background: #fff;
+}
+
+.service .icon-boxes .icon-box {
+    text-align: center;
+    background: #fff;
+    padding: 40px 30px;
+    width: 100%;
+    border: 1px solid #eef0ef;
+}
+
+.service .icon-boxes .icon-box i {
+    font-size: 32px;
+    padding: 18px;
+    color: #5fcf80;
+    margin-bottom: 30px;
+    background: #ecf9f0;
+    border-radius: 50px;
+}
+
+.service .icon-boxes .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+}
+
+.service .icon-boxes .icon-box p {
+    font-size: 15px;
+    color: #848484;
+}
+
+
+/**
+course
+ */
+.courses .course-item {
+    border-radius: 5px;
+    border: 1px solid #eef0ef;
+}
+
+.courses .course-content {
+    padding: 15px;
+}
+
+.courses .course-content h3 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.courses .course-content h3 a {
+    color: #37423b;
+    transition: 0.3s;
+}
+
+.courses .course-content h3 a:hover {
+    color: #5fcf80;
+}
+
+.courses .course-content p {
+    font-size: 14px;
+    color: #777777;
+}
+
+.courses .course-content h4 {
+    font-size: 14px;
+    background: #5fcf80;
+    padding: 7px 14px;
+    color: #fff;
+    margin: 0;
+}
+
+.courses .course-content .price {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: #37423b;
+}
+
+/*
+contact
+ */
+.contact {
+    padding-top: 5px;
+}
+
+.contact .info {
+    width: 100%;
+    background: #fff;
+}
+
+.contact .info i {
+    font-size: 20px;
+    color: #5fcf80;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #ecf9f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #37423b;
+}
+
+.contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #657a6d;
+}
+
+.contact .info .email, .contact .info .phone {
+    margin-top: 40px;
+}
+
+.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+    background: #5fcf80;
+    color: #fff;
+}
+
+.contact .php-email-form {
+    width: 100%;
+    background: #fff;
+}
+
+.contact .php-email-form .form-group {
+    padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .error-message br + br {
+    margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input, .contact .php-email-form textarea {
+    border-radius: 4px;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+    border-color: #5fcf80;
+}
+
+.contact .php-email-form input {
+    height: 44px;
+}
+
+.contact .php-email-form textarea {
+    padding: 10px 12px;
+}
+
+.contact .php-email-form button[type="submit"] {
+    background: #5fcf80;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+    background: #3ac162;
+}
+
+/**
+course page
+ */
+
+.breadcrumb_bg {
+    background-image: url('../images/nature_big_4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.breadcrumb {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+
+.breadcrumb:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    content: "";
+    opacity: 0.8;
+    z-index: -1;
+}
+
+
+.breadcrumb .breadcrumb_iner {
+    height: 450px;
+    width: 100%;
+    display: table;
+}
+
+
+.breadcrumb .breadcrumb_iner .breadcrumb_iner_item {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+@media (max-width: 576px) {
+    .breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2 {
+        font-size: 40px;
+    }
+}
+
+
+.breadcrumb .breadcrumb_iner .breadcrumb_iner_item p {
+    font-size: 15px;
+    color: #fff;
+}
+
+
+.breadcrumb .breadcrumb_iner .breadcrumb_iner_item span {
+    margin: 0px 5px;
+    font-size: 12px;
+}
+
+
+.breadcrumb {
+    margin-bottom: 0px !important;
+}
+
+
+.course-details h3 {
+    font-size: 24px;
+    margin: 30px 0 15px 0;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.course-details h3:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #eef0ef;
+    bottom: 0;
+    left: 0;
+}
+
+.course-details h3:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: #5fcf80;
+    bottom: 0;
+    left: 0;
+}
+
+.course-details .course-info {
+    background: #f6f7f6;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+.course-details .course-info h5 {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.course-details .course-info p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.course-details .course-info a {
+    color: #657a6d;
+}
+
+/**
+footer
+ */
+.footer-area h4 {
+    padding-bottom: 30px
+}
+
+.footer-area .number {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px
+}
+
+.footer-area .single-footer-widget h4 {
+    color: #fff
+}
+
+@media (max-width: 768px) {
+    .footer-area .single-footer-widget .newsletter .primary-btn {
+        right: 2% !important;
+        width: auto;
+        right: 0;
+        top: 5px;
+        transform: translate(0%, 0)
+    }
+}
+
+.footer-widget-wrap {
+    color: #fff
+}
+
+@media (max-width: 991px) {
+    .single-footer-widget {
+        margin-bottom: 30px
+    }
+}
+
+
+
+
+.single-footer-widget .hr-list li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.3)
+}
+
+.footer-bottom-wrap {
+    background: #222;
+    color: #fff
+}
+
+.footer-bottom {
+    padding: 15px 0px
+}
+
+
+
+.footer-text a,
+.footer-text i {
+    color: #f42f2c
+}
