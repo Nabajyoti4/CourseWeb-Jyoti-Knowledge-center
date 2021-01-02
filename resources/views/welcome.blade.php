@@ -578,14 +578,14 @@
 
         </div>
         <div class="carousel-item">
-            <img src="{{asset('images/header-bg.jpg')}}" class="d-block w-100 img_class">
+            <img src="{{asset('images/header-1-bg.jpg')}}" class="d-block w-100 img_class">
             <div class="carousel-caption">
                 <h1>Jyoti Knowledge Center</h1>
                 <h3>Online platform for courses</h3>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="{{asset('images/header-bg.jpg')}}" class="d-block w-100 img_class">
+            <img src="{{asset('images/header-2-bg.jpg')}}" class="d-block w-100 img_class">
             <div class="carousel-caption">
                 <h1>Jyoti Knowledge Center</h1>
                 <h3>Online platform for courses</h3>
