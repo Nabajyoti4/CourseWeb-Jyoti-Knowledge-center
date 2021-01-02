@@ -23,11 +23,13 @@
             line-height: 1.15;
             -webkit-text-size-adjust: 100%
         }
+
         #mainNav {
             padding-top: 1rem;
             padding-bottom: 1rem;
             background-color: #ffffff;
         }
+
         #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
             color: #000000;
         }
@@ -444,16 +446,18 @@
                 color: rgba(203, 213, 224, var(--text-opacity))
             }
         }
-        .img_class{
-            height:600px;
+
+        .img_class {
+            height: 600px;
             background-position: center;
-            background-size:cover;
+            background-size: cover;
         }
+
         @media screen and (max-width: 426px) {
-            .img_class{
-                height:400px;
+            .img_class {
+                height: 400px;
                 background-position: center;
-                background-size:cover;
+                background-size: cover;
             }
         }
     </style>
@@ -556,7 +560,7 @@
 {{--        <h3 class="subtitle">Online platform for courses</h3>--}}
 {{--    </div>--}}
 {{--</div>--}}
-<div id="carouselExampleCaptions" class="carousel carousel-fade" data-ride="carousel" >
+<div id="carouselExampleCaptions" class="carousel carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -576,7 +580,7 @@
         <div class="carousel-item">
             <img src="{{asset('images/header-bg.jpg')}}" class="d-block w-100 img_class">
             <div class="carousel-caption">
-                <h1 >Jyoti Knowledge Center</h1>
+                <h1>Jyoti Knowledge Center</h1>
                 <h3>Online platform for courses</h3>
             </div>
         </div>
@@ -621,59 +625,59 @@
     </section>
     <!-- End About Section -->
     <hr>
-    <section id="service" class="service">
-        <div class="container" data-aos="fade-up">
-            <div class="section-title">
-                <p>Services</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 d-flex align-items-stretch">
-                    <div class="content">
-                        <h3>Service Name</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                            Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus
-                            optio ad corporis.
-                        </p>
-                        <div class="text-center">
-                            <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="content">
-                        <h3>Service Name</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                            Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus
-                            optio ad corporis.
-                        </p>
-                        <div class="text-center">
-                            <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="content">
-                        <h3>Service Name</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                            Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus
-                            optio ad corporis.
-                        </p>
-                        <div class="text-center">
-                            <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    {{--    <section id="service" class="service">--}}
+    {{--        <div class="container" data-aos="fade-up">--}}
+    {{--            <div class="section-title">--}}
+    {{--                <p>Services</p>--}}
+    {{--            </div>--}}
+    {{--            <div class="row">--}}
+    {{--                <div class="col-lg-4 d-flex align-items-stretch">--}}
+    {{--                    <div class="content">--}}
+    {{--                        <h3>Service Name</h3>--}}
+    {{--                        <p>--}}
+    {{--                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut--}}
+    {{--                            labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit--}}
+    {{--                            Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus--}}
+    {{--                            optio ad corporis.--}}
+    {{--                        </p>--}}
+    {{--                        <div class="text-center">--}}
+    {{--                            <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--                <div class="col-lg-4 d-flex align-items-stretch mt-4 mt-lg-0">--}}
+    {{--                    <div class="content">--}}
+    {{--                        <h3>Service Name</h3>--}}
+    {{--                        <p>--}}
+    {{--                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut--}}
+    {{--                            labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit--}}
+    {{--                            Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus--}}
+    {{--                            optio ad corporis.--}}
+    {{--                        </p>--}}
+    {{--                        <div class="text-center">--}}
+    {{--                            <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--                <div class="col-lg-4 d-flex align-items-stretch mt-4 mt-lg-0">--}}
+    {{--                    <div class="content">--}}
+    {{--                        <h3>Service Name</h3>--}}
+    {{--                        <p>--}}
+    {{--                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut--}}
+    {{--                            labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit--}}
+    {{--                            Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus--}}
+    {{--                            optio ad corporis.--}}
+    {{--                        </p>--}}
+    {{--                        <div class="text-center">--}}
+    {{--                            <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
 
-        </div>
-    </section><!-- End Why Us Section -->
-    <hr>
+    {{--        </div>--}}
+    {{--    </section><!-- End Why Us Section -->--}}
+    {{--    <hr>--}}
     <section id="courses" class="courses">
         <div class="container" data-aos="fade-up">
 
@@ -684,7 +688,7 @@
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="course-item">
+                    <div class="course-item shadow">
                         <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
                         <div class="course-content">
                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -697,12 +701,16 @@
                                 dolorem tempore.</p>
                             <div class="trainer d-flex justify-content-between align-items-center">
                             </div>
+                            <div class="text-center">
+                                <a href="{{route('course')}}" class="btn btn-primary">Learn More <i
+                                        class="bx bx-chevron-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div> <!-- End Course Item-->
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="course-item">
+                    <div class="course-item shadow">
                         <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
                         <div class="course-content">
                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -718,12 +726,16 @@
                                 </div>
 
                             </div>
+                            <div class="text-center">
+                                <a href="{{route('course')}}" class="btn btn-primary">Learn More <i
+                                        class="bx bx-chevron-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div> <!-- End Course Item-->
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="course-item">
+                    <div class="course-item shadow">
                         <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
                         <div class="course-content">
                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -739,6 +751,10 @@
                                 </div>
 
                             </div>
+                            <div class="text-center">
+                                <a href="{{route('course')}}" class="btn btn-primary">Learn More <i
+                                        class="bx bx-chevron-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div> <!-- End Course Item-->
@@ -747,11 +763,9 @@
 
         </div>
     </section><!-- End Popular Courses Section -->
-    <hr>
-    <section id="contact" class="contact">
-
+    <section id="contact" class="contact bg-white" >
         <div class="container" data-aos="fade-up">
-            <div class="section-title">
+            <div class="section-title pt-3">
                 <p>Contact Us</p>
             </div>
             <div class="row mt-5">
@@ -804,27 +818,48 @@
 <footer class="footer-area">
     <div class="footer-widget-wrap section-bg bg-success p-6">
         <div class="container">
-            <div class="row section-gap">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="row section-gap justify-content-between">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-footer-widget">
-                        <h4>jyoti knowledge Center</h4>
-                        <ul class="hr-list">
-                            <li class="d-flex justify-content-between">
-                                <span>Course</span> <span>Info</span>
+                        <ul class="list">
+                            <h4>Jyoti Knowledge Center</h4>
+                            <li class="d-flex justify-content-between text-justify">
+                                Edugate is a great start for an education personnel or organization to start the online
+                                business with 1 Click.
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-center">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-footer-widget">
-                        <h4>Contact Us</h4>
-                        <p>
-                            Address full
-                        </p>
-                        <p class="number">
-                            987456123 <br>
-                            987456123
-                        </p>
+                        <ul class="hr-list">
+                            <br> <br> <br>
+                            <li class="d-flex">
+                                <i class="fas fa-envelope pr-1"></i> @mail.com
+                            </li>
+                            <li class="d-flex ">
+                                <i class="fas fa-map-marker-alt pr-1"></i> Address full
+                            </li>
+                            <li class="d-flex">
+                                <i class="fas fa-phone-alt pr-1"></i> 987456123, 987456123
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 d-flex ">
+                    <div class="single-footer-widget">
+                        <ul class="list">
+                            <h4>Useful Link</h4>
+                            <li class="d-flex align-content-center">
+                                <a href="{{route('welcome')}}" class="nav-link"><i class="fas fa-chevron-right"></i>
+                                    Home</a>
+                            </li>
+                            <li class="d-flex align-content-center">
+                                <a href="#about" class="nav-link"><i class="fas fa-chevron-right"></i> About</a>
+                            </li>
+
+
+                        </ul>
                     </div>
                 </div>
             </div>

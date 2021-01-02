@@ -12,6 +12,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -21,6 +22,53 @@
     </style>
 
     <style>
+        #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+            color: #000000;
+        }
+
+        @media (min-width: 992px) {
+            #mainNav {
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+                border: none;
+                background-color: #ffffff;
+                color: #000000;
+                transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+            }
+
+            #mainNav .navbar-brand {
+                font-size: 1.5em;
+                transition: font-size 0.3s ease-in-out;
+            }
+
+            #mainNav .navbar-brand img {
+                height: 2rem;
+                transition: height 0.3s ease-in-out;
+            }
+
+            #mainNav.navbar-shrink {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                background-color: #212529;
+            }
+
+            #mainNav.navbar-shrink .navbar-brand {
+                font-size: 1.25em;
+            }
+
+            #mainNav.navbar-shrink .navbar-brand svg,
+            #mainNav.navbar-shrink .navbar-brand img {
+                height: 1.5rem;
+            }
+
+            #mainNav .navbar-nav .nav-item {
+                margin-right: 1rem;
+            }
+
+            #mainNav .navbar-nav .nav-item:last-child {
+                margin-right: 0;
+            }
+        }
         body {
             font-family: 'Nunito';
         }
@@ -43,22 +91,24 @@
 
 
 <!-- Links -->
-<nav class="navbar navbar-expand-lg pt-4 pb-4 bg-success fixed-top" >
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="">
+            <i class="fab fa-html5 fa-2x text-black-50"></i>
+            <img src="{{asset('images/navbar-logo.png')}}" alt=""/></a>
+        <button class="navbar-toggler navbar-toggler-right text-black-50" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ml-1"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="text-white nav-name mr-5" href="{{route('welcome')}}">Jyoti knowledge Center</a>
-            <ul class="navbar-nav d-flex align-content-end mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active text-white subtitle" aria-current="page" href="{{route('welcome')}}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white subtitle" href="#">About us</a>
-                </li>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto  font-weight-bold">
+                <li class="nav-item"><a class="nav-link text-black-50" href="{{route('welcome')}}">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-black-50" href="#about">About</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white subtitle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle text-black-50" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Courses
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -70,6 +120,7 @@
         </div>
     </div>
 </nav>
+
 <section class="breadcrumb breadcrumb_bg">
     <div class="container">
         <div class="row">
@@ -133,27 +184,48 @@
 <footer class="footer-area">
     <div class="footer-widget-wrap section-bg bg-success p-6">
         <div class="container">
-            <div class="row section-gap">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="row section-gap justify-content-between">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-footer-widget">
-                        <h4>jyoti knowledge Center</h4>
-                        <ul class="hr-list">
-                            <li class="d-flex justify-content-between">
-                                <span>Course</span> <span>Info</span>
+                        <ul class="list">
+                            <h4>Jyoti Knowledge Center</h4>
+                            <li class="d-flex justify-content-between text-justify">
+                                Edugate is a great start for an education personnel or organization to start the online
+                                business with 1 Click.
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-center">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-footer-widget">
-                        <h4>Contact Us</h4>
-                        <p>
-                            Address full
-                        </p>
-                        <p class="number">
-                            987456123 <br>
-                            987456123
-                        </p>
+                        <ul class="hr-list">
+                            <br> <br> <br>
+                            <li class="d-flex">
+                                <i class="fas fa-envelope pr-1"></i> @mail.com
+                            </li>
+                            <li class="d-flex ">
+                                <i class="fas fa-map-marker-alt pr-1"></i> Address full
+                            </li>
+                            <li class="d-flex">
+                                <i class="fas fa-phone-alt pr-1"></i> 987456123, 987456123
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 d-flex ">
+                    <div class="single-footer-widget">
+                        <ul class="list">
+                            <h4>Useful Link</h4>
+                            <li class="d-flex align-content-center">
+                                <a href="{{route('welcome')}}" class="nav-link"><i class="fas fa-chevron-right"></i>
+                                    Home</a>
+                            </li>
+                            <li class="d-flex align-content-center">
+                                <a href="#about" class="nav-link"><i class="fas fa-chevron-right"></i> About</a>
+                            </li>
+
+
+                        </ul>
                     </div>
                 </div>
             </div>
