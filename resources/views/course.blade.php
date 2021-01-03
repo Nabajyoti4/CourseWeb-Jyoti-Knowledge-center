@@ -10,8 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
+
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 
     <!-- Scripts -->
@@ -22,6 +23,12 @@
     </style>
 
     <style>
+        #mainNav {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: #ffffff;
+        }
+
         #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
             color: #000000;
         }
@@ -69,6 +76,7 @@
                 margin-right: 0;
             }
         }
+
         body {
             font-family: 'Nunito';
         }
