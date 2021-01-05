@@ -448,7 +448,7 @@
         }
 
         .img_class {
-            height: 600px;
+            height: 500px;
             background-position: center;
             background-size: cover;
         }
@@ -506,7 +506,7 @@
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="">
             <i class="fab fa-html5 fa-2x text-black-50"></i>
-            <img src="{{asset('images/navbar-logo.png')}}" alt=""/></a>
+            <img src="{{asset('images/navbar-logo.png')}}"  style="height:60px;" alt=""/></a>
         <button class="navbar-toggler navbar-toggler-right text-black-50" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -588,7 +588,7 @@
             <div class="" >
                     <img src="{{asset('images/header-bg.jpg')}}" class="d-block w-100 img_class">
                     <div class="carousel-caption">
-                        <h1>Jyoti Knowledge Center</h1>
+                        <h1 class="text-uppercase"><b>Jyoti Knowledge Center</b></h1>
                         <h3>Online platform for courses</h3>
                     </div>
             </div>
@@ -596,14 +596,14 @@
         <div class="carousel-item">
             <img src="{{asset('images/header-1-bg.jpg')}}" class="d-block w-100 img_class">
             <div class="carousel-caption">
-                <h1>Jyoti Knowledge Center</h1>
+                <h1 class="text-uppercase"><b>Jyoti Knowledge Center</b></h1>
                 <h3>Online platform for courses</h3>
             </div>
         </div>
         <div class="carousel-item">
             <img src="{{asset('images/header-2-bg.jpg')}}" class="d-block w-100 img_class">
             <div class="carousel-caption">
-                <h1>Jyoti Knowledge Center</h1>
+                <h1 class="text-uppercase"><b>Jyoti Knowledge Center</b></h1>
                 <h3>Online platform for courses</h3>
             </div>
         </div>
