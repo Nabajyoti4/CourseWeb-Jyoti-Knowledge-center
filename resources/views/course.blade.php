@@ -76,7 +76,11 @@
                 margin-right: 0;
             }
         }
-
+        @media screen and (max-width: 426px) {
+            .padd {
+                padding-left: 12px !important;
+            }
+        }
         body {
             font-family: 'Nunito';
         }
@@ -111,7 +115,7 @@
             <i class="fas fa-bars ml-1"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto  font-weight-bold">
+            <ul class="navbar-nav text-uppercase ml-auto  font-weight-bold padd">
                 <li class="nav-item"><a class="nav-link" style="color:black" href="{{route('welcome')}}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" style="color:black" href="#about">About</a></li>
                 <li class="nav-item dropdown">
