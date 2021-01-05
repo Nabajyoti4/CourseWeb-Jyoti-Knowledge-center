@@ -99,11 +99,11 @@
 
 
 <!-- Links -->
+
 <nav class="navbar navbar-expand-lg p-1 navbar-dark fixed-top shadow" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="">
-            <i class="fab fa-html5 fa-2x text-black-50"></i>
-            <img src="{{asset('images/navbar-logo.png')}}" alt=""/></a>
+            <img src="{{asset('images/navbar-logo.png')}}"  style="height:60px;" alt=""/></a>
         <button class="navbar-toggler navbar-toggler-right text-black-50" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -120,8 +120,16 @@
                         Courses
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" style="color:black" href="#">Course Name</a>
-                        <a class="dropdown-item" style="color:black" href="#">Course Name</a>
+                        <a class="dropdown-item" style="color:black" href="#">Jyoti Bright - Kids House</a>
+                        <a class="dropdown-item" style="color:black" href="#">Vedic Maths</a>
+                        <a class="dropdown-item" style="color:black" href="#">Mid Brain Activation</a>
+                        <a class="dropdown-item" style="color:black" href="#">DMIT Test</a>
+                        <a class="dropdown-item" style="color:black" href="#">Hand Writting ( Eng, Assamese, Hindi)</a>
+                        <a class="dropdown-item" style="color:black" href="#">Fine Arts</a>
+                        <a class="dropdown-item" style="color:black" href="#">Spoken English</a>
+                        <a class="dropdown-item" style="color:black" href="#">Coaching English</a>
+                        <a class="dropdown-item" style="color:black" href="#">Jyoti Public School</a>
+                        <a class="dropdown-item" style="color:black" href="#">Day Care Centre</a>
                     </div>
                 </li>
             </ul>
