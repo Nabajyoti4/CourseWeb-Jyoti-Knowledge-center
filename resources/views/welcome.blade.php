@@ -474,6 +474,9 @@
                 bottom: 20%;
                 left: 15%;
             }
+            .padd {
+                padding-left: 12px !important;
+            }
         }
 
 
@@ -514,7 +517,7 @@
             <i class="fas fa-bars ml-1"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto  font-weight-bold">
+            <ul class="navbar-nav text-uppercase ml-auto  font-weight-bold padd">
                 <li class="nav-item"><a class="nav-link" style="color:black" href="{{route('welcome')}}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" style="color:black" href="#about">About</a></li>
                 <li class="nav-item dropdown">
@@ -527,7 +530,7 @@
                         <a class="dropdown-item" style="color:black" href="#">Vedic Maths</a>
                         <a class="dropdown-item" style="color:black" href="#">Mid Brain Activation</a>
                         <a class="dropdown-item" style="color:black" href="#">DMIT Test</a>
-                        <a class="dropdown-item" style="color:black" href="#">Hand Writting ( Eng, Assamese, Hindi)</a>
+                        <a class="dropdown-item" style="color:black" href="#">Hand Writing</a>
                         <a class="dropdown-item" style="color:black" href="#">Fine Arts</a>
                         <a class="dropdown-item" style="color:black" href="#">Spoken English</a>
                         <a class="dropdown-item" style="color:black" href="#">Coaching English</a>
@@ -535,6 +538,7 @@
                         <a class="dropdown-item" style="color:black" href="#">Day Care Centre</a>
                     </div>
                 </li>
+                <li class="nav-item"><a class="nav-link" style="color:black" href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
