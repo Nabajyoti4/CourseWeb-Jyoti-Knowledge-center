@@ -452,14 +452,31 @@
             background-position: center;
             background-size: cover;
         }
-
+        .carousel-caption {
+            position: absolute;
+            right: 15%;
+            bottom: 30%;
+            left: 15%;
+            z-index: 10;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+            text-align: center;
+        }
         @media screen and (max-width: 426px) {
             .img_class {
                 height: 400px;
                 background-position: center;
                 background-size: cover;
             }
+            .carousel-caption {
+                right: 15%;
+                bottom: 20%;
+                left: 15%;
+            }
         }
+
+
     </style>
 
     <style>
@@ -566,14 +583,14 @@
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
     </ol>
-    <div class="carousel-inner">
+    <div class="carousel-inner ">
         <div class="carousel-item active">
-            <div class="d-flex align-items-center">
-                <img src="{{asset('images/header-bg.jpg')}}" class="d-block w-100 img_class">
-                <div class="carousel-caption">
-                    <h1>Jyoti Knowledge Center</h1>
-                    <h3>Online platform for courses</h3>
-                </div>
+            <div class="" >
+                    <img src="{{asset('images/header-bg.jpg')}}" class="d-block w-100 img_class">
+                    <div class="carousel-caption">
+                        <h1>Jyoti Knowledge Center</h1>
+                        <h3>Online platform for courses</h3>
+                    </div>
             </div>
         </div>
         <div class="carousel-item">
