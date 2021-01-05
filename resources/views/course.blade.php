@@ -99,7 +99,7 @@
 
 
 <!-- Links -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow" id="mainNav">
+<nav class="navbar navbar-expand-lg p-1 navbar-dark fixed-top shadow" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="">
             <i class="fab fa-html5 fa-2x text-black-50"></i>
@@ -112,16 +112,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto  font-weight-bold">
-                <li class="nav-item"><a class="nav-link text-black-50" href="{{route('welcome')}}">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-black-50" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" style="color:black" href="{{route('welcome')}}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" style="color:black" href="#about">About</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-black-50" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Courses
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Course Name</a>
-                        <a class="dropdown-item" href="#">Course Name</a>
+                        <a class="dropdown-item" style="color:black" href="#">Course Name</a>
+                        <a class="dropdown-item" style="color:black" href="#">Course Name</a>
                     </div>
                 </li>
             </ul>
@@ -158,7 +158,6 @@
                     Qui voluptas qui vero ipsum ea voluptatem. Omnis et est. Voluptatem officia voluptatem adipisci et iusto provident doloremque consequatur. Quia et porro est. Et qui corrupti laudantium ipsa.
                     Eum quasi saepe aperiam qui delectus quaerat in. Vitae mollitia ipsa quam. Ipsa aut qui numquam eum iste est dolorum. Rem voluptas ut sit ut.
                 </p>
-                <button class="btn-success p-2 sm:rounded-lg">Apply</button>
             </div>
             <div class="col-lg-4">
 
@@ -169,7 +168,7 @@
 
                 <div class="course-info d-flex justify-content-between align-items-center">
                     <h5>Course Fee</h5>
-                    <p>$165</p>
+                    <p>₹165</p>
                 </div>
 
                 <div class="course-info d-flex justify-content-between align-items-center">
@@ -180,6 +179,10 @@
                 <div class="course-info d-flex justify-content-between align-items-center">
                     <h5>Schedule</h5>
                     <p>5.00 pm - 7.00 pm</p>
+                </div>
+                <div class="course-info d-flex justify-content-between align-items-center">
+                    <button class="btn-success p-2 sm:rounded-lg">Apply Online</button>
+                    <button class="btn-success p-2 sm:rounded-lg">Apply Offline</button>
                 </div>
 
             </div>
