@@ -523,8 +523,16 @@
                         Courses
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" style="color:black" href="#">Course Name</a>
-                        <a class="dropdown-item" style="color:black" href="#">Course Name</a>
+                        <a class="dropdown-item" style="color:black" href="#">Jyoti Bright - Kids House</a>
+                        <a class="dropdown-item" style="color:black" href="#">Vedic Maths</a>
+                        <a class="dropdown-item" style="color:black" href="#">Mid Brain Activation</a>
+                        <a class="dropdown-item" style="color:black" href="#">DMIT Test</a>
+                        <a class="dropdown-item" style="color:black" href="#">Hand Writting ( Eng, Assamese, Hindi)</a>
+                        <a class="dropdown-item" style="color:black" href="#">Fine Arts</a>
+                        <a class="dropdown-item" style="color:black" href="#">Spoken English</a>
+                        <a class="dropdown-item" style="color:black" href="#">Coaching English</a>
+                        <a class="dropdown-item" style="color:black" href="#">Jyoti Public School</a>
+                        <a class="dropdown-item" style="color:black" href="#">Day Care Centre</a>
                     </div>
                 </li>
             </ul>
