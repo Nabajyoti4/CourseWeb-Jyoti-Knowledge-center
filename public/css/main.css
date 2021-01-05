@@ -104,6 +104,19 @@ section {
     padding-bottom: 40px;
 }
 
+/*.carousel-caption-header {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    right: 15%;*/
+/*    bottom: 150px;*/
+/*    left: 15%;*/
+/*    z-index: 10;*/
+/*    padding-top: 20px;*/
+/*    padding-bottom: 20px;*/
+/*    color: #fff;*/
+/*    text-align: center;*/
+/*}*/
+
 .section-title h2 {
     font-size: 14px;
     font-weight: 500;
