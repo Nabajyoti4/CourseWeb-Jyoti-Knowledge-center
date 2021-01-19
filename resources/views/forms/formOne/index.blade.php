@@ -478,6 +478,8 @@
         body {
             font-family: 'Nunito';
         }
+
+
     </style>
 </head>
 <body>
@@ -552,151 +554,144 @@
 <main>
     <section id="course-details" class="course-details">
         <div id="colorlib-contact">
-            <div class="container">
+            <div class="container border bg-white rounded-lg">
                 <div class="row">
                     <div class="col-md-12 col-md-offset-1 animate-box">
                         <h3>Admission application form</h3>
-                        <form action="#">
+                        <form action="{{route('formone.store')}}" method="post" enctype="multipart/form-data">
+                            @csrf
+
                             <div class="row form-group">
-                                <div class="col-md-6">
-                                    <label for="fname">Application No. : AY 20</label>
-                                    <input type="text" class="form-control mb" placeholder="Your firstname">
+                                <div class="col-md-4">
+                                    <label for="email" class="font-weight-bold">Admission sought in: </label>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="lname">Registration No. </label>
-                                    <input type="text" class="form-control" placeholder="Your lastname">
+                                <div class="col-md-8">
+                                    <label for="playground">Playground</label>
+                                    <input type="checkbox" id="playground" class="mr-3" name="admission_sought[]" value="playground">
+                                    <label for="nursery">Nursery</label>
+                                    <input type="checkbox" id="nursery" class="mr-3" name="admission_sought[]" value="nursery">
+                                    <label for="LKG">LKG</label>
+                                    <input type="checkbox" id="LKG" class="mr-3" name="admission_sought[]" value="LKG">
+                                    <label for="UKG">UKG</label>
+                                    <input type="checkbox" id="UKG" class="mr-3" name="admission_sought[]" value="UKG">
                                 </div>
                             </div>
 
                             <div class="row form-group">
                                 <div class="col-md-4">
-                                    <label for="email">Application sought in: </label>
-                                </div>
-
-
-                                <div class="col-md-8">
-                                    <label for="email">Playground</label>
-                                    <input type="checkbox" id="playground" name="playground" value="playground">
-                                    <label for="email">Nursery</label>
-                                    <input type="checkbox" id="nursery" name="nursery" value="nursery">
-                                    <label for="email">LKG</label>
-                                    <input type="checkbox" id="LKG" name="LKG" value="LKG">
-                                    <label for="email">UKG</label>
-                                    <input type="checkbox" id="UKG" name="UKG" value="UKG">
-                                </div>
-                            </div>
-
-                            <div class="row form-group">
-                                <div class="col-md-4">
-                                    <label for="email">Batch Required : </label>
+                                    <label class="font-weight-bold" for="email">Batch Required : </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <label for="email">Morning</label>
-                                    <input type="checkbox" id="LKG" name="morning" value="morning">
-                                    <label for="email">Afternoon</label>
-                                    <input type="checkbox" id="UKG" name="afternoon" value="afternoon">
+                                    <label for="morning">Morning</label>
+                                    <input type="radio" class="mr-3" id="LKG" name="batch" value="morning">
+                                    <label for="afternoon">Afternoon</label>
+                                    <input type="radio" class="mr-3" id="UKG" name="batch" value="afternoon">
                                 </div>
                             </div>
 
                             <div class="row form-group">
+                                <div class="col-md-6">
+                                    <label for="dob" class="font-weight-bold">Date of birth</label>
+                                    <input type="date" class="form-control mb-3"  name="dob">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="image" class="font-weight-bold">Photo</label>
+                                    <input type="file" class="form-control mb-3"  name="image">
+                                </div>
+
+                            </div>
+
+                            <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="message">Date of birth</label>
-                                    <input type="date" class="form-control" name="dob">
+                                    <label for="name" class="font-weight-bold">Name of Child: </label>
+                                    <input type="text" class="form-control mb-3" placeholder="Your name"
+                                           name="name">
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <div class="col-md-12">
-                                    <label for="fname">Name of Child: </label>
-                                    <input type="text" class="form-control mb" placeholder="Your firstname"
-                                           name="child_name">
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-md-12">
-                                    <label for="fname">Father's Name: </label>
-                                    <input type="text" class="form-control mb" placeholder="Your firstname"
+                                <div class="col-md-6">
+                                    <label for="father_name" class="font-weight-bold">Father's Name: </label>
+                                    <input type="text" class="form-control mb-3" placeholder="Your fathername"
                                            name="father_name">
                                 </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-md-12">
-                                    <label for="fname">Name of Child: </label>
-                                    <input type="text" class="form-control mb" placeholder="Your firstname"
+                                <div class="col-md-6">
+                                    <label for="mother_name" class="font-weight-bold">Mother's Name: </label>
+                                    <input type="text" class="form-control mb-3" placeholder="Your mothername"
                                            name="mother_name">
                                 </div>
                             </div>
+
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="fname">Address: </label>
-                                    <textarea type="text" class="form-control mb" cols="30" rows="5"
+                                    <label for="address" class="font-weight-bold">Address: </label>
+                                    <textarea type="text" class="form-control mb-3" cols="30" rows="5"
                                               placeholder="Your address" name="address"></textarea>
                                 </div>
                             </div>
 
                             <div class="row form-group">
-                                <div class="col-md-12">
-                                    <label for="fname">Email: </label>
-                                    <input type="email" class="form-control mb" placeholder="Your email" name="email">
+                                <div class="col-md-6">
+                                    <label for="email" class="font-weight-bold">Email: </label>
+                                    <input type="email" class="form-control mb-3" placeholder="Your email" name="email">
                                 </div>
-                            </div>
-
-                            <div class="row form-group">
-                                <div class="col-md-12">
-                                    <label for="fname">Phone No: </label>
-                                    <input type="number" class="form-control mb" placeholder="Your phone no"
+                                <div class="col-md-6">
+                                    <label for="phone" class="font-weight-bold">Phone No: </label>
+                                    <input type="text" class="form-control mb-3" placeholder="Your phone no"
                                            name="phone">
                                 </div>
                             </div>
 
                             <div class="row form-group">
                                 <div class="col-md-4">
-                                    <label for="fname">Mobile No: </label>
+                                    <label for="mobile" class="font-weight-bold">Mobile No: </label>
                                 </div>
-                                <div class="col-md-8">
-                                    <label for="fname">Father: </label>
-                                    <input type="number" class="form-control mb" placeholder="Your phone no"
-                                           name="father_number">
-                                    <label for="fname">Mother: </label>
-                                    <input type="number" class="form-control mb" placeholder="Your phone no"
-                                           name="mother_number">
+                                <div class="col-md-4">
+                                    <label for="father_number" class="font-weight-bold">Father Number: </label>
+                                    <input type="text" class="form-control mb-3" placeholder="Your father no"
+                                           name="father_phone">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="mother_number" class="font-weight-bold">Mother Number: </label>
+                                    <input type="text" class="form-control mb-3" placeholder="Your mother no"
+                                           name="mother_phone">
                                 </div>
                             </div>
 
-                            <div class="row form-group">
-                                <div class="col-md-4">
-                                    <label for="email">Previous Schooling: </label>
+                            <div class="row form-group mb-4">
+                                <div class="col-md-4" >
+                                    <label for="schooling" class="font-weight-bold">Previous Schooling: </label>
                                 </div>
 
                                 <div class="col-md-8">
-                                    <label for="email">Yes</label>
-                                    <input type="checkbox" id="playground" name="playground" value="playground">
-                                    <label for="email">No</label>
-                                    <input type="checkbox" id="nursery" name="nursery" value="nursery">
-                                    <label for="fname">If yes specify: </label>
+                                    <label for="yes" class="font-weight-bold">Yes</label>
+                                    <input type="radio" id="playground" class="mr-3" name="schooling" value="yes">
+                                    <label for="no" class="font-weight-bold">No</label>
+                                    <input type="radio" id="nursery" class="mr-3" name="schooling" value="no">
+                                    <label for="specify" class="font-weight-bold">If yes specify: </label>
                                     <textarea type="text" class="form-control mb" cols="30" rows="3"
                                               placeholder="specify" name="specify"></textarea>
                                 </div>
                             </div>
 
                             <div class="row form-group">
-                                <div class="col-md-4">
-                                    <label for="email">Is your children toilet-trained?: </label>
+                                <div class="col-md-4" >
+                                    <label for="toilet" class="font-weight-bold">Is your children toilet-trained?: </label>
                                 </div>
 
                                 <div class="col-md-8">
-                                    <label for="email">Yes</label>
-                                    <input type="checkbox" id="playground" name="playground" value="playground">
-                                    <label for="email">No</label>
-                                    <input type="checkbox" id="nursery" name="nursery" value="nursery">
+                                    <label for="yes" class="font-weight-bold">Yes</label>
+                                    <input type="radio" class="mr-3" id="playground" name="toilet" value="yes">
+                                    <label for="no" class="font-weight-bold">No</label>
+                                    <input type="radio" class="mr-3" id="nursery" name="toilet" value="no">
                                 </div>
                             </div>
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="email">How many sibilings does the children have? Give age
+                                    <label for="siblings" class="font-weight-bold">How many siblings does the children have? Give age
                                         details: </label>
                                     <textarea type="text" class="form-control mb" cols="30" rows="3"
-                                              placeholder="specify" name="specify"></textarea>
+                                              placeholder="siblings" name="siblings"></textarea>
                                 </div>
                             </div>
                             <div class="borderdiv">
@@ -704,32 +699,31 @@
 
                                 <div class="row form-group">
                                     <div class="col-md-12">
-                                        <label for="fname">Profession: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
-                                        <label for="fname">Company/Designation: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
-                                        <label for="fname">Qualification: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
+                                        <label for="father_profession">Profession: </label>
+                                        <input type="text" class="form-control mb-2" placeholder="Your father profession"
+                                               name="father_profession">
+                                        <label for="father_company">Company/Designation: </label>
+                                        <input type="text" class="form-control mb-2" placeholder="Your father company or designation"
+                                               name="father_company">
+                                        <label for="father_qualification">Qualification: </label>
+                                        <input type="text" class="form-control mb-2" placeholder="Your qualification"
+                                               name="father_qualification">
                                     </div>
                                 </div>
                             </div>
                             <div class="borderdiv">
                                 <label class="header font-weight-bold bg-light">Mother details</label>
-
                                 <div class="row form-group">
                                     <div class="col-md-12">
-                                        <label for="fname">Profession: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
-                                        <label for="fname">Company/Designation: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
-                                        <label for="fname">Qualification: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
+                                        <label for="mother_profession">Profession: </label>
+                                        <input type="text" class="form-control mb" placeholder="Your mother profession"
+                                               name="mother_profession">
+                                        <label for="mother_company">Company/Designation: </label>
+                                        <input type="text" class="form-control mb" placeholder="Your mother company or designation"
+                                               name="mother_company">
+                                        <label for="mother_qualification">Qualification: </label>
+                                        <input type="text" class="form-control mb" placeholder="Your mother qualification"
+                                               name="mother_qualification">
                                     </div>
                                 </div>
                             </div>
@@ -739,30 +733,30 @@
                                 <label class="header font-weight-bold bg-light">Medical & Health Record of the Child</label>
                                 <div class="row form-group">
                                     <div class="col-md-12">
-                                        <label for="fname">Sepecific disease suffered in the past , if any: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
-                                        <label for="fname">Operations undergone in the past , if any: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
-                                        <label for="fname">Allergies, if Any: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
-                                        <label for="fname">Any other diseases for which child on regular medication: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
-                                        <label for="fname">Does your child suffer from any phobias?: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
-                                        <label for="fname">Any special instructions: </label>
+                                        <label for="diseases">Sepecific disease suffered in the past , if any: </label>
+                                        <input type="text" class="form-control mb" placeholder="diseases"
+                                               name="diseases">
+                                        <label for="operation">Operations undergone in the past , if any: </label>
+                                        <input type="text" class="form-control mb" placeholder="operation"
+                                               name="operation">
+                                        <label for="allergy">Allergies, if Any: </label>
+                                        <input type="text" class="form-control mb" placeholder="allergy"
+                                               name="allergy">
+                                        <label for="medication">Any other diseases for which child on regular medication: </label>
+                                        <input type="text" class="form-control mb" placeholder="medication"
+                                               name="medication">
+                                        <label for="phobia">Does your child suffer from any phobias?: </label>
+                                        <input type="text" class="form-control mb" placeholder="phobia"
+                                               name="phobia">
+                                        <label for="instructions">Any special instructions: </label>
                                         <textarea type="text" class="form-control mb" cols="30" rows="3"
-                                                  placeholder="specify" name="specify"></textarea>
-                                        <label for="fname">Height (in cms): </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
-                                        <label for="fname">Weight (in kgs): </label>
-                                        <input type="text" class="form-control mb" placeholder="Your firstname"
-                                               name="mother_name">
+                                                  placeholder="instructions" name="instructions"></textarea>
+                                        <label for="height">Height (in cms): </label>
+                                        <input type="text" class="form-control mb" placeholder="Your height"
+                                               name="height">
+                                        <label for="weight">Weight (in kgs): </label>
+                                        <input type="text" class="form-control mb" placeholder="Your weight"
+                                               name="weight">
                                     </div>
                                 </div>
                             </div>
@@ -787,14 +781,14 @@
                                                         <tr>
                                                             <td>A) BCG</td>
                                                             <td>(0-2 weeks)</td>
-                                                            <td><input type="radio"  name="bcg" value="yes"></td>
-                                                            <td><input type="radio"  name="bcg" value="no"></td>
+                                                            <td><input type="radio" name="bcg" value="yes"></td>
+                                                            <td><input type="radio" name="bcg" value="no"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>B) DPT(I,II,III)</td>
                                                             <td>(6-24 weeks)</td>
-                                                            <td><input type="radio"  name="dpt" value="yes"></td>
-                                                            <td><input type="radio"  name="dpt" value="no"></td>
+                                                            <td><input type="radio" name="dpt" value="yes"></td>
+                                                            <td><input type="radio" name="dpt" value="no"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>C) Oral Polio Vacchine(OPV)</td>
@@ -860,28 +854,27 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="fname">What are your Child's strengths as you see?: </label>
+                                    <label for="strength" class="font-weight-bold">What are your Child's strengths as you see?: </label>
                                     <textarea type="text" class="form-control mb" cols="30" rows="5"
-                                              placeholder="Your address" name="address"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="row form-group">
-                                <div class="col-md-12">What are his/her key developmental needs as you suggest in next 12 months?: </label>
-                                    <textarea type="text" class="form-control mb" cols="30" rows="5"
-                                              placeholder="Your address" name="address"></textarea>
+                                              placeholder="Your strength" name="strength"></textarea>
                                 </div>
                             </div>
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="fname">What are the activities he/she likes?: </label>
+                                <label for="development" class="font-weight-bold">What are his/her key developmental needs as you suggest in next 12 months?: </label>
                                     <textarea type="text" class="form-control mb" cols="30" rows="5"
-                                              placeholder="Your address" name="address"></textarea>
+                                              placeholder="Your development" name="development"></textarea>
                                 </div>
                             </div>
 
-
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label for="activities" class="font-weight-bold" >What are the activities he/she likes?: </label>
+                                    <textarea type="text" class="form-control mb" cols="30" rows="5"
+                                              placeholder="Your activities" name="activities"></textarea>
+                                </div>
+                            </div>
 
 
                             <div class="form-group text-center">

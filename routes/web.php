@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FormThreeController;
 use App\Http\Controllers\FormTwoController;
+use App\Http\Controllers\StudentFormOneController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,9 +29,15 @@ Route::get('/course', function () {
 })->name('course');
 
 
+/**
+ * Form one
+ */
 Route::get('/form', function () {
     return view('forms.formOne.index');
 })->name('from');
+
+Route::post('/form/store', [StudentFormOneController::class, 'store'])->name('formone.store');
+
 
 Route::get('/formtwo', function () {
     return view('forms.formTwo.index');
@@ -56,4 +63,6 @@ Route::get('/admin/panel', function () {
     return view('admin.index');
 })->middleware(['auth'])->name('admin.panel');
 
+Route::get('/admin/panel/formone', [\App\Http\Controllers\Admin\StudentFormOneController::class, 'index'])
+    ->name('admin.formone.index');
 
