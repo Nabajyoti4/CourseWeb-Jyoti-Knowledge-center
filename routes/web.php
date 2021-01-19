@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormTwoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,7 @@ Route::get('/course', function () {
     return view('course');
 })->name('course');
 
+
 Route::get('/form', function () {
     return view('forms.formOne.index');
 })->name('from');
@@ -32,14 +34,22 @@ Route::get('/form', function () {
 Route::get('/formtwo', function () {
     return view('forms.formTwo.index');
 })->name('fromtwo');
+//store formtwo
+Route::post('/formtwo/store', [FormTwoController::class, 'store'])
+    ->name('fromtwo.store');
 
 Route::get('/formthree', function () {
     return view('forms.formThree.index');
 })->name('fromthree');
 
+
+
+
 require __DIR__.'/auth.php';
+
 //admin
 Route::get('/admin/panel', function () {
     return view('admin.index');
 })->middleware(['auth'])->name('admin.panel');
+
 
