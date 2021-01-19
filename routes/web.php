@@ -26,3 +26,8 @@ Route::get('/course', function () {
 })->name('course');
 
 require __DIR__.'/auth.php';
+//admin
+Route::get('/admin/panel', function () {
+    return view('admin.index');
+})->middleware(['auth'])->name('admin.panel');
+
