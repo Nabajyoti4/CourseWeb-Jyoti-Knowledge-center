@@ -12,6 +12,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 
@@ -145,7 +146,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="breadcrumb_iner text-center">
+                <div class="breadcrumb_iner text-center" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="breadcrumb_iner_item">
                         <h2>Course Details</h2>
                         <p>Home<span>/</span>Course Details</p>
@@ -157,7 +158,7 @@
 </section>
 <main>
 <section id="course-details" class="course-details">
-    <div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
         <div class="section-title">
             <p>Course Name</p>
         </div>
@@ -265,6 +266,9 @@
     </div>
 </footer>
 
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>

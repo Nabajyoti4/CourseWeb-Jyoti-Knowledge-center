@@ -25,6 +25,18 @@ Route::get('/course', function () {
     return view('course');
 })->name('course');
 
+Route::get('/form', function () {
+    return view('forms.formOne.index');
+})->name('from');
+
+Route::get('/formtwo', function () {
+    return view('forms.formTwo.index');
+})->name('fromtwo');
+
+Route::get('/formthree', function () {
+    return view('forms.formThree.index');
+})->name('fromthree');
+
 require __DIR__.'/auth.php';
 //admin
 Route::get('/admin/panel', function () {
