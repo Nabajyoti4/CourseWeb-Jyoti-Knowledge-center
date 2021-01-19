@@ -66,3 +66,6 @@ Route::get('/admin/panel', function () {
 Route::get('/admin/panel/formone', [\App\Http\Controllers\Admin\StudentFormOneController::class, 'index'])
     ->name('admin.formone.index');
 
+Route::get('/admin/panel/formone/{id}', [\App\Http\Controllers\Admin\StudentFormOneController::class, 'show'])
+    ->name('admin.formone.show');
+

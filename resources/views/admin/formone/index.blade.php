@@ -52,6 +52,7 @@ Student Form details
                             <td>{{$student->name}}</td>
                             <td>{{$student->medical->id}}</td>
                             <td>{{$student->immunation->id}}</td>
+                            <td><a href="{{route('admin.formone.show', $student->id)}}" class="genric-btn success circle">Show</a></td>
                         </tr>
                     @empty
                         <tr>

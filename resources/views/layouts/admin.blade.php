@@ -16,6 +16,7 @@
 <!-- Custom styles for this template-->
     {{--    <link rel="stylesheet" href="{{asset('css/app.css')}}">--}}
     <link href="{{asset('css/adminPanel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/admin.css')}}" rel="stylesheet">
     <script src="{{asset('js/sweetalert2.min.js')}}"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">

@@ -49,6 +49,6 @@ class Student extends Model
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function immunation(){
-        return $this->hasOne(Medical::class, 'id', 'immunation_id');
+        return $this->hasOne(Immunation::class, 'id', 'immunation_id');
     }
 }
