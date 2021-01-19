@@ -565,7 +565,7 @@
                 <div class="row">
                     <div class="col-md-12 col-md-offset-1 animate-box">
                         <h3>Admission application form</h3>
-                        <form action="#">
+                        <form action="{{route('fromthree.store')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('POST')
                             <div class="row form-group">
@@ -785,35 +785,35 @@
                                 <div class="row form-group">
                                     <div class="col-md-12">
                                         <label for="email">Computer</label>
-                                        <input type="checkbox" class="mr-2" id="playground" name="subject[]"
+                                        <input type="checkbox" class="mr-2" id="playground" name="subjects[]"
                                                value="Computer">
                                         <label for="email">Maths</label>
-                                        <input type="checkbox" class="mr-2" id="nursery" name="subject[]" value="Maths">
+                                        <input type="checkbox" class="mr-2" id="nursery" name="subjects[]" value="Maths">
                                         <label for="email">Science</label>
-                                        <input type="checkbox" class="mr-2" id="nursery" name="subject[]"
+                                        <input type="checkbox" class="mr-2" id="nursery" name="subjects[]"
                                                value="Science">
                                         <label for="email">Hindi</label>
-                                        <input type="checkbox" class="mr-2" id="nursery" name="subject[]" value="Hindi">
+                                        <input type="checkbox" class="mr-2" id="nursery" name="subjects[]" value="Hindi">
                                         <label for="email">Reading</label>
-                                        <input type="checkbox" class="mr-2" id="nursery" name="subject[]"
+                                        <input type="checkbox" class="mr-2" id="nursery" name="subjects[]"
                                                value="Reading">
                                         <label for="email">English</label>
-                                        <input type="checkbox" class="mr-2" id="nursery" name="subject[]"
+                                        <input type="checkbox" class="mr-2" id="nursery" name="subjects[]"
                                                value="English">
                                         <label for="email">Assamese</label>
-                                        <input type="checkbox" class="mr-2" id="nursery" name="subject[]"
+                                        <input type="checkbox" class="mr-2" id="nursery" name="subjects[]"
                                                value="Assamese">
                                         <label for="email">Social Science</label>
-                                        <input type="checkbox" class="mr-2" id="nursery" name="subject[]"
+                                        <input type="checkbox" class="mr-2" id="nursery" name="subjects[]"
                                                value="Social Science">
                                         <label for="email">Fine Arts</label>
-                                        <input type="checkbox" class="mr-2" id="nursery" name="subject[]"
+                                        <input type="checkbox" class="mr-2" id="nursery" name="subjects[]"
                                                value="Fine Arts">
                                         <label for="email">Spoken English</label>
-                                        <input type="checkbox" class="mr-2" id="nursery" name="subject[]"
+                                        <input type="checkbox" class="mr-2" id="nursery" name="subjects[]"
                                                value="Spoken English">
                                         <label for="email">Handwriting (English/Assamese/Hindi)</label>
-                                        <input type="checkbox" id="nursery" name="subject[]"
+                                        <input type="checkbox" id="nursery" name="subjects[]"
                                                value="Handwriting (English/Assamese/Hindi)">
                                     </div>
                                 </div>

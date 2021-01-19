@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormThreeController;
 use App\Http\Controllers\FormTwoController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +43,9 @@ Route::get('/formthree', function () {
     return view('forms.formThree.index');
 })->name('fromthree');
 
+//store formthree
+Route::post('/formthree/store', [FormThreeController::class, 'store'])
+    ->name('fromthree.store');
 
 
 
