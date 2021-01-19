@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Scripts -->
 {{--    <script src="{{ asset('js/app.js') }}" defer></script>--}}
@@ -599,22 +600,22 @@
         <div class="carousel-item active">
             <div class="" >
                     <img src="{{asset('images/header-bg.jpg')}}" class="d-block w-100 img_class">
-                    <div class="carousel-caption">
-                        <h1 class="text-uppercase"><b>Jyoti Knowledge Center</b></h1>
+                    <div class="carousel-caption" data-aos="zoom-in" data-aos-duration="1000">
+                        <h1 class="text-uppercase" ><b>Jyoti Knowledge Center</b></h1>
                         <h3>Online platform for courses</h3>
                     </div>
             </div>
         </div>
         <div class="carousel-item">
             <img src="{{asset('images/header-1-bg.jpg')}}" class="d-block w-100 img_class">
-            <div class="carousel-caption">
+            <div class="carousel-caption" data-aos="zoom-in" data-aos-duration="1000">
                 <h1 class="text-uppercase"><b>Jyoti Knowledge Center</b></h1>
                 <h3>Online platform for courses</h3>
             </div>
         </div>
         <div class="carousel-item">
             <img src="{{asset('images/header-2-bg.jpg')}}" class="d-block w-100 img_class">
-            <div class="carousel-caption">
+            <div class="carousel-caption" data-aos="zoom-in" data-aos-duration="1000">
                 <h1 class="text-uppercase"><b>Jyoti Knowledge Center</b></h1>
                 <h3>Online platform for courses</h3>
             </div>
@@ -713,14 +714,12 @@
                 <p>Popular Courses</p>
             </div>
 
-            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                     <div class="course-item shadow">
                         <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
                         <div class="course-content">
-
-
                             <h3><a href="{{route('course')}}">Jyoti Bright - Kids House</a></h3>
                             <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores
                                 dolorem tempore.</p>
@@ -732,6 +731,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div> <!-- End Course Item-->
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                     <div class="course-item shadow">
@@ -1034,6 +1034,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Third party plugin JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
