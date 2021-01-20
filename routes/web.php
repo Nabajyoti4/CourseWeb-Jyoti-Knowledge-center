@@ -84,3 +84,17 @@ Route::get('/admin/panel/formone', [\App\Http\Controllers\Admin\StudentFormOneCo
 Route::get('/admin/panel/formone/{id}', [\App\Http\Controllers\Admin\StudentFormOneController::class, 'show'])
     ->name('admin.formone.show');
 
+// form two
+Route::get('/admin/panel/formtwo', [\App\Http\Controllers\Admin\FormTwoController::class, 'index'])
+    ->name('admin.formtwo.index');
+
+Route::get('/admin/panel/formtwo/{id}', [\App\Http\Controllers\Admin\FormTwoController::class, 'show'])
+    ->name('admin.formtwo.show');
+
+// form three
+Route::get('/admin/panel/formthree', [\App\Http\Controllers\Admin\FormThreeController::class, 'index'])
+    ->name('admin.formthree.index');
+
+Route::get('/admin/panel/formthree/{id}', [\App\Http\Controllers\Admin\FormThreeController::class, 'show'])
+    ->name('admin.formthree.show');
+

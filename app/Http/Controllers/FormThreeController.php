@@ -18,7 +18,7 @@ class FormThreeController extends Controller
 
         $data['subjects'] = implode(', ',$data['subjects']);
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('Formthree');
+            $data['image'] = $request->file('image')->store('Formthree','public');
         }
 
         FormThree::create($data);
