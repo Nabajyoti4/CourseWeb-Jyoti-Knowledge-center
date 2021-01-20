@@ -70,42 +70,48 @@
             <div class="sidebar-heading">
             Addons
         </div>
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-               aria-expanded="true"
-               aria-controls="collapsePages">
-                <i class="fas fa-fw fa-folder"></i>
-                <span>Pages</span>
-            </a>
-            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">HomePage Sections:</h6>
+        <!-- Nav Item - Pages Collapse Menu -->
+{{--            <li class="nav-item">--}}
+{{--            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"--}}
+{{--               aria-expanded="true"--}}
+{{--               aria-controls="collapsePages">--}}
+{{--                <i class="fas fa-fw fa-folder"></i>--}}
+{{--                <span>Pages</span>--}}
+{{--            </a>--}}
+{{--            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">--}}
+{{--                <div class="bg-white py-2 collapse-inner rounded">--}}
+{{--                    <h6 class="collapse-header">HomePage Sections:</h6>--}}
 {{--                    <a class="collapse-item" href="{{route('admin.services.index')}}">Services</a>--}}
-{{--                    <div class="collapse-divider"></div>--}}
-{{--                    <a class="collapse-item" href="{{route('admin.teams.index')}}">Team</a>--}}
-{{--                    <div class="collapse-divider"></div>--}}
-{{--                    <a class="collapse-item" href="{{route('admin.price.index')}}">Packs</a>--}}
-{{--                    <div class="collapse-divider"></div>--}}
-{{--                    <a class="collapse-item" href="{{route('admin.rating.index')}}">Rating</a>--}}
-{{--                      <div class="collapse-divider"></div>--}}
-{{--                    <a class="collapse-item" href="{{route('admin.role.index')}}">Role</a>--}}
-{{--                      <div class="collapse-divider"></div>--}}
-{{--                    <a class="collapse-item" href="{{route('admin.city.index')}}">City</a>--}}
-{{--                    <div class="collapse-divider"></div>--}}
-                </div>
-            </div>
-        </li>
+{{--                    --}}{{--                    <div class="collapse-divider"></div>--}}
+{{--                    --}}{{--                    <a class="collapse-item" href="{{route('admin.teams.index')}}">Team</a>--}}
+{{--                    --}}{{--                    <div class="collapse-divider"></div>--}}
+{{--                    --}}{{--                    <a class="collapse-item" href="{{route('admin.price.index')}}">Packs</a>--}}
+{{--                    --}}{{--                    <div class="collapse-divider"></div>--}}
+{{--                    --}}{{--                    <a class="collapse-item" href="{{route('admin.rating.index')}}">Rating</a>--}}
+{{--                    --}}{{--                      <div class="collapse-divider"></div>--}}
+{{--                    --}}{{--                    <a class="collapse-item" href="{{route('admin.role.index')}}">Role</a>--}}
+{{--                    --}}{{--                      <div class="collapse-divider"></div>--}}
+{{--                    --}}{{--                    <a class="collapse-item" href="{{route('admin.city.index')}}">City</a>--}}
+{{--                    --}}{{--                    <div class="collapse-divider"></div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </li>--}}
         <hr class="sidebar-divider">
-         <li class="nav-item">
-            <a class="nav-link" href="">
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.formthree.index')}}">
                 <i class="fas fa-book-medical"></i>
-                <span>Users</span></a>
+                <span>Form One</span></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{route('admin.formone.index')}}">
                 <i class="fas fa-book-medical"></i>
-                <span>FormThree</span></a>
+                <span>Form Three</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.formtwo.index')}}">
+                <i class="fas fa-book-medical"></i>
+                <span>Form Four</span></a>
         </li>
 
         <hr class="sidebar-divider d-none d-md-block">
