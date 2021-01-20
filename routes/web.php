@@ -42,7 +42,11 @@ Route::post('/form/store', [StudentFormOneController::class, 'store'])->name('fo
 Route::get('/formtwo', function () {
     return view('forms.formTwo.index');
 })->name('fromtwo');
-//store formtwo
+
+
+/**
+ * store formtwo
+ * */
 Route::post('/formtwo/store', [FormTwoController::class, 'store'])
     ->name('fromtwo.store');
 
@@ -50,11 +54,22 @@ Route::get('/formthree', function () {
     return view('forms.formThree.index');
 })->name('fromthree');
 
-//store formthree
+/**
+ * store formthree
+ * */
 Route::post('/formthree/store', [FormThreeController::class, 'store'])
     ->name('fromthree.store');
 
 
+/**
+ * formfour
+ */
+Route::get('/formfour', function () {
+    return view('forms.formFour.index');
+})->name('fromfour');
+
+Route::post('/formfour/store', [\App\Http\Controllers\FormFourController::class, 'store'])
+    ->name('fromfour.store');
 
 require __DIR__.'/auth.php';
 
