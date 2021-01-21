@@ -641,10 +641,10 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="father_contact_no">Phone No: </label>
-                                    <input type="text" class="form-control mb @error('father_contact_no') is-invalid @enderror" placeholder="Your Father's Contact"
-                                           name="father_contact_no" value="{{ old('father_contact_no') }}">
-                                    @error('father_contact_no')
+                                    <label for="father_phone">Phone No: </label>
+                                    <input type="text" class="form-control mb @error('father_phone') is-invalid @enderror" placeholder="Your Father's Contact"
+                                           name="father_phone" value="{{ old('father_phone') }}">
+                                    @error('father_phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -673,10 +673,10 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="mother_contact_no">Phone No: </label>
-                                    <input type="text" class="form-control mb @error('mother_contact_no') is-invalid @enderror" placeholder="Your Mother's Contact"
-                                           name="mother_contact_no" value="{{ old('mother_contact_no') }}">
-                                    @error('mother_contact_no')
+                                    <label for="mother_phone">Phone No: </label>
+                                    <input type="text" class="form-control mb @error('mother_phone') is-invalid @enderror" placeholder="Your Mother's Contact"
+                                           name="mother_phone" value="{{ old('mother_phone') }}">
+                                    @error('mother_phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -699,10 +699,10 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="father_email">Email: </label>
-                                    <input type="email" class="form-control mb @error('father_email') is-invalid @enderror"
-                                           placeholder="Your email" name="father_email" value="{{ old('father_email') }}">
-                                    @error('father_email')
+                                    <label for="email">Email: </label>
+                                    <input type="email" class="form-control mb @error('email') is-invalid @enderror"
+                                           placeholder="Your email" name="email" value="{{ old('email') }}">
+                                    @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

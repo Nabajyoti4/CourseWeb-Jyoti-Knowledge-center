@@ -21,7 +21,7 @@ class FormFourController extends Controller
         'emergency', 'email', 'from', 'to', 'facility']);
 
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('Formfour');
+            $data['image'] = $request->file('image', )->store('Formfour', 'public');
         }
 
         FormFour::create($data);

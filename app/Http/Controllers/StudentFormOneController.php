@@ -31,7 +31,7 @@ class StudentFormOneController extends Controller
 
 
         if ($request->hasFile('image')) {
-            $student_data['image'] = $request->file('image')->store('Formone');
+            $student_data['image'] = $request->file('image')->store('Formone','public');
         }
 
         $immunation_id = Immunation::create($immunation_data);

@@ -104,6 +104,11 @@
                 <span>Form One</span></a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.formfour.index')}}">
+                <i class="fas fa-book-medical"></i>
+                <span>Form Two</span></a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{route('admin.formone.index')}}">
                 <i class="fas fa-book-medical"></i>
                 <span>Form Three</span></a>
