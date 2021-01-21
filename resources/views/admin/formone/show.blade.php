@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="image" class="font-weight-bold">Photo</label>
-                                    <img src="{{asset('storage/'.$student->image)}}">
+                                    <img style="height: 200px; width: 200px; background-size: cover;" alt="" src="{{asset('storage/'.$student->image)}}">
                                 </div>
 
                             </div>

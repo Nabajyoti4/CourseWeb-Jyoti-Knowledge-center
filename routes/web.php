@@ -24,52 +24,57 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/course', function () {
-    return view('course');
-})->name('course');
+Route::get('/course/{id}',[\App\Http\Controllers\CourseController::class, 'show'])->name('course');
 
 
 /**
  * Form one
  */
-Route::get('/form', function () {
+Route::get('/form-three', function () {
     return view('forms.formOne.index');
-})->name('from');
+})->name('from-three');
 
-Route::post('/form/store', [StudentFormOneController::class, 'store'])->name('formone.store');
+Route::post('/form-three/store', [StudentFormOneController::class, 'store'])->name('form-three.store');
 
 
-Route::get('/formtwo', function () {
-    return view('forms.formTwo.index');
-})->name('fromtwo');
+
 
 
 /**
  * store formtwo
  * */
-Route::post('/formtwo/store', [FormTwoController::class, 'store'])
-    ->name('fromtwo.store');
+Route::post('/form-four/store', [FormTwoController::class, 'store'])
+    ->name('from-four.store');
 
-Route::get('/formthree', function () {
-    return view('forms.formThree.index');
-})->name('fromthree');
+Route::get('/form-four', function () {
+    return view('forms.formTwo.index');
+})->name('from-four');
+
+
 
 /**
  * store formthree
  * */
-Route::post('/formthree/store', [FormThreeController::class, 'store'])
-    ->name('fromthree.store');
+
+Route::get('/form-two', function () {
+    return view('forms.formThree.index');
+})->name('from-two');
+
+Route::post('/form-two/store', [FormThreeController::class, 'store'])
+    ->name('from-two.store');
 
 
 /**
  * formfour
  */
-Route::get('/formfour', function () {
+Route::get('/form-one', function () {
     return view('forms.formFour.index');
-})->name('fromfour');
+})->name('from-one');
 
-Route::post('/formfour/store', [\App\Http\Controllers\FormFourController::class, 'store'])
-    ->name('fromfour.store');
+Route::post('/form-one/store', [\App\Http\Controllers\FormFourController::class, 'store'])
+    ->name('from-one.store');
+
+
 
 require __DIR__.'/auth.php';
 

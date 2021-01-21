@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <script src="{{asset('js/sweetalert2.min.js')}}"></script>
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 
     <!-- Scripts -->
@@ -499,6 +499,16 @@
 
 
 <!-- Links -->
+@if ($message = Session::get('success'))
+    <script>
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: '{{$message}}',
+            showConfirmButton: true,
+        })
+    </script>
+@endif
 
 <nav class="navbar navbar-expand-lg p-1 navbar-dark fixed-top shadow" id="mainNav">
     <div class="container">
@@ -558,7 +568,7 @@
                 <div class="row">
                     <div class="col-md-12 col-md-offset-1 animate-box">
                         <h3>Admission application form</h3>
-                        <form action="{{route('formone.store')}}" method="post" enctype="multipart/form-data">
+                        <form action="{{route('form-three.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
 
                             <div class="row form-group">

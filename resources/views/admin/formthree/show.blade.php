@@ -182,7 +182,7 @@
                                                     will abide by the rules and regulations of Jyoti Knowledge Centre</p>
                                             </div>
                                         </div>
-                                    </form>
+
                                 </div>
                             </div>
                         </div>

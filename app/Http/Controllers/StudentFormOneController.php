@@ -41,7 +41,7 @@ class StudentFormOneController extends Controller
 
         Student::create($student_data);
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Form Submitted');
 
     }
 

@@ -26,7 +26,7 @@ class FormFourController extends Controller
 
         FormFour::create($data);
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Form Submitted');
 
     }
 }

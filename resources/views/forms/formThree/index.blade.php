@@ -561,11 +561,11 @@
 <main>
     <section id="course-details" class="course-details">
         <div id="colorlib-contact">
-            <div class="container">
+            <div class="container border bg-white rounded-lg">
                 <div class="row">
                     <div class="col-md-12 col-md-offset-1 animate-box">
                         <h3>Admission application form</h3>
-                        <form action="{{route('fromthree.store')}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('from-two.store')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('POST')
                             <div class="row form-group">

@@ -42,16 +42,16 @@ Student Form details
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th>Coupon Id</th>
+                        <th>Student Name</th>
+                        <th>Date</th>
+                        <th>Show</th>
                     </tr>
                     </thead>
                     <tbody id="data">
                     @forelse($students as $student)
                         <tr>
-                            <td>{{$student->id}}</td>
                             <td>{{$student->name}}</td>
-                            <td>{{$student->medical->id}}</td>
-                            <td>{{$student->immunation->id}}</td>
+                            <td>{{$student->created_at->diffForHumans()}}</td>
                             <td><a href="{{route('admin.formone.show', $student->id)}}" class="genric-btn success circle">Show</a></td>
                         </tr>
                     @empty

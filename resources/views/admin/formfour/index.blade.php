@@ -42,13 +42,16 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th>Coupon Id</th>
+                        <th>Student Name</th>
+                        <th>Date</th>
+                        <th>Show</th>
                     </tr>
                     </thead>
                     <tbody id="data">
                     @forelse($records as $record)
                         <tr>
                             <td>{{$record->name}}</td>
+                            <td>{{$record->created_at->diffForHumans()}}</td>
                             <td><a href="{{route('admin.formfour.show', $record->id)}}" class="genric-btn success circle">Show</a></td>
                         </tr>
                     @empty

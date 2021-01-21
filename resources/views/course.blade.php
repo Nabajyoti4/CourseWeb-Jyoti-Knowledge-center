@@ -125,16 +125,16 @@
                         Courses
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" style="color:black" href="#">Jyoti Bright - Kids House</a>
-                        <a class="dropdown-item" style="color:black" href="#">Vedic Maths</a>
-                        <a class="dropdown-item" style="color:black" href="#">Mid Brain Activation</a>
-                        <a class="dropdown-item" style="color:black" href="#">DMIT Test</a>
-                        <a class="dropdown-item" style="color:black" href="#">Hand Writing</a>
-                        <a class="dropdown-item" style="color:black" href="#">Fine Arts</a>
-                        <a class="dropdown-item" style="color:black" href="#">Spoken English</a>
-                        <a class="dropdown-item" style="color:black" href="#">Coaching English</a>
-                        <a class="dropdown-item" style="color:black" href="#">Jyoti Public School</a>
-                        <a class="dropdown-item" style="color:black" href="#">Day Care Centre</a>
+                        <a class="dropdown-item" style="color:black" href="{{route('course', 3 )}}">Jyoti Bright - Kids House</a>
+                        <a class="dropdown-item" style="color:black" href="{{route('course', 4 )}}">Vedic Maths</a>
+                        <a class="dropdown-item" style="color:black" href="{{route('course', 4 )}}">Mid Brain Activation</a>
+                        <a class="dropdown-item" style="color:black" href="{{route('course', 4 )}}">DMIT Test</a>
+                        <a class="dropdown-item" style="color:black" href="{{route('course', 1 )}}">Hand Writing</a>
+                        <a class="dropdown-item" style="color:black" href="{{route('course', 1 )}}">Fine Arts</a>
+                        <a class="dropdown-item" style="color:black" href="{{route('course', 1 )}}">Spoken English</a>
+                        <a class="dropdown-item" style="color:black" href="{{route('course', 1 )}}">Coaching English</a>
+                        <a class="dropdown-item" style="color:black" href="{{route('course', 3 )}}">Jyoti Public School</a>
+                        <a class="dropdown-item" style="color:black" href="{{route('course', 2 )}}">Day Care Centre</a>
                     </div>
                 </li>
             </ul>
@@ -194,8 +194,20 @@
                     <p>5.00 pm - 7.00 pm</p>
                 </div>
                 <div class="course-info d-flex justify-content-between align-items-center">
-                    <button class="btn-success p-2 sm:rounded-lg">Apply Online</button>
-                    <button class="btn-success p-2 sm:rounded-lg">Apply Offline</button>
+                    @if($id == 1)
+                        <a href="{{route('from-one')}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
+                        <a href="{{route('from-one')}}" class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
+                    @elseif($id == 2)
+                        <a href="{{route('from-two')}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
+                        <a href="{{route('from-two')}}" class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
+                    @elseif($id == 3)
+                        <a href="{{route('from-three')}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
+                        <a href="{{route('from-three')}}" class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
+                    @elseif($id == 4)
+                        <a href="{{route('from-four')}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
+                        <a href="{{route('from-four')}}" class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
+                    @endif
+
                 </div>
 
             </div>
