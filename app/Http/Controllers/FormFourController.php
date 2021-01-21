@@ -16,7 +16,7 @@ class FormFourController extends Controller
      */
     public function store(Request $request){
         $data = $request->only(['name',
-        'image', 'gender', 'age',
+        'image', 'gender', 'age', 'course',
         'father_name', 'father_phone', 'mother_name', 'mother_phone',
         'emergency', 'email', 'from', 'to', 'facility']);
 

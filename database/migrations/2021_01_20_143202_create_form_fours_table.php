@@ -18,6 +18,7 @@ class CreateFormFoursTable extends Migration
             $table->string('name');
             $table->string('image')->nullable();
             $table->string('age');
+            $table->string('course');
             $table->string('gender');
             $table->string('father_name')->nullable();
             $table->string('father_phone')->nullable();

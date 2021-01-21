@@ -10,7 +10,7 @@ class FormThreeController extends Controller
     public function store(FormThreeRequest $request)
     {
         $data = $request->only([
-            'name', 'dob', 'gender', 'nationality', 'spoken_language',
+            'name', 'dob', 'gender', 'nationality',  'course','spoken_language',
             'address', 'school', 'class',
             'father_name', 'father_occupation', 'father_contact_no', 'father_whatsapp_no', 'father_email',
             'mother_name', 'mother_occupation', 'mother_contact_no', 'mother_whatsapp_no', 'subjects', 'image'

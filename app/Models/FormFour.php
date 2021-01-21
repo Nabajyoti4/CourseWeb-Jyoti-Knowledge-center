@@ -12,6 +12,7 @@ class FormFour extends Model
         'image',
         'gender',
         'age',
+        'course',
         'father_name',
         'father_phone',
         'mother_name',

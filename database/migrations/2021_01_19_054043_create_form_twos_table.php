@@ -17,6 +17,7 @@ class CreateFormTwosTable extends Migration
             $table->id();
             $table->string('name');
             $table->date('dob');
+            $table->string('course');
             $table->string('gender');
             $table->string('nationality');
             $table->string('spoken_language');

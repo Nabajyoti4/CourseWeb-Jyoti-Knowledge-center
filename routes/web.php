@@ -30,9 +30,7 @@ Route::get('/course/{id}',[\App\Http\Controllers\CourseController::class, 'show'
 /**
  * Form one
  */
-Route::get('/form-three', function () {
-    return view('forms.formOne.index');
-})->name('from-three');
+Route::get('/form-three/', [StudentFormOneController::class, 'index'])->name('from-three');
 
 Route::post('/form-three/store', [StudentFormOneController::class, 'store'])->name('form-three.store');
 
@@ -81,41 +79,44 @@ Route::get('/admin/panel', function () {
 })->middleware(['auth'])->name('admin.panel');
 
 Route::get('/admin/panel/formone', [\App\Http\Controllers\Admin\StudentFormOneController::class, 'index'])
-    ->name('admin.formone.index');
+    ->middleware(['auth'])->name('admin.formone.index');
 
 Route::get('/admin/panel/formone/{id}', [\App\Http\Controllers\Admin\StudentFormOneController::class, 'show'])
-    ->name('admin.formone.show');
+    ->middleware(['auth'])->name('admin.formone.show');
 
 // form two
 Route::get('/admin/panel/formtwo', [\App\Http\Controllers\Admin\FormTwoController::class, 'index'])
-    ->name('admin.formtwo.index');
+    ->middleware(['auth'])->name('admin.formtwo.index');
 
 Route::get('/admin/panel/formtwo/{id}', [\App\Http\Controllers\Admin\FormTwoController::class, 'show'])
-    ->name('admin.formtwo.show');
+    ->middleware(['auth'])->name('admin.formtwo.show');
 
 // form three
 Route::get('/admin/panel/formthree', [\App\Http\Controllers\Admin\FormThreeController::class, 'index'])
-    ->name('admin.formthree.index');
+    ->middleware(['auth'])->name('admin.formthree.index');
 
 Route::get('/admin/panel/formthree/{id}', [\App\Http\Controllers\Admin\FormThreeController::class, 'show'])
-    ->name('admin.formthree.show');
+    ->middleware(['auth'])->name('admin.formthree.show');
 
 // form four
 Route::get('/admin/panel/formfour', [\App\Http\Controllers\Admin\FormFourController::class, 'index'])
-    ->name('admin.formfour.index');
+    ->middleware(['auth'])->name('admin.formfour.index');
 Route::get('/admin/panel/formfour/{id}', [\App\Http\Controllers\Admin\FormFourController::class, 'show'])
-    ->name('admin.formfour.show');
+    ->middleware(['auth'])->name('admin.formfour.show');
 
 
-//form pdf
-Route::get('admin/panel/form-pdf', [\App\Http\Controllers\Admin\FormPdfController::class, 'index'])
-    ->name('admin.form-pdf.index');
+//courses
+Route::get('admin/courses/index', [\App\Http\Controllers\Admin\CourseController::class, 'index'])
+    ->middleware(['auth'])->name('admin.courses.index');
 
-Route::patch('admin/panel/form-one/update', [\App\Http\Controllers\Admin\FormPdfController::class, 'update_form_one'])
-    ->name('admin.form-one.update');
-Route::patch('admin/panel/form-two/update', [\App\Http\Controllers\Admin\FormPdfController::class, 'update_form_two'])
-    ->name('admin.form-two.update');
-Route::patch('admin/panel/form-three/update', [\App\Http\Controllers\Admin\FormPdfController::class, 'update_form_three'])
-    ->name('admin.form-three.update');
-Route::patch('admin/panel/form-four/update', [\App\Http\Controllers\Admin\FormPdfController::class, 'update_form_four'])
-    ->name('admin.form-four.update');
+Route::get('admin/courses/create', [\App\Http\Controllers\Admin\CourseController::class, 'create'])
+    ->middleware(['auth'])->name('admin.courses.create');
+
+Route::post('admin/courses/store', [\App\Http\Controllers\Admin\CourseController::class, 'store'])
+    ->middleware(['auth'])->name('admin.courses.store');
+
+Route::get('admin/courses/edit/{id}', [\App\Http\Controllers\Admin\CourseController::class, 'edit'])
+    ->middleware(['auth'])->name('admin.courses.edit');
+
+Route::patch('admin/courses/update/{id}', [\App\Http\Controllers\Admin\CourseController::class, 'update'])
+    ->middleware(['auth'])->name('admin.courses.update');

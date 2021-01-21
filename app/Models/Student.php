@@ -12,6 +12,7 @@ class Student extends Model
         'medical_id',
         'immunation_id',
         'admission_sought',
+        'course',
         'batch',
         'dob',
         'image',

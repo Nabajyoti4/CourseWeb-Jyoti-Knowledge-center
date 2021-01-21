@@ -16,6 +16,7 @@ class CreateFormThreesTable extends Migration
         Schema::create('form_threes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('course');
             $table->date('dob');
             $table->string('gender');
             $table->string('nationality');

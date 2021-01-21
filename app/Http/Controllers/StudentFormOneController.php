@@ -12,10 +12,17 @@ class StudentFormOneController extends Controller
     //
 
     /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function index($course){
+        return view('forms.formOne.index', compact('course'));
+    }
+
+    /**
      * @param Request $request
      */
     public function store(Request $request){
-        $student_data = $request->only(['admission_sought',
+        $student_data = $request->only(['admission_sought', 'course',
             'batch', 'dob', 'image', 'name', 'father_name', 'father_phone', 'father_profession', 'father_company',
             'father_qualification', 'mother_name', 'mother_phone', 'mother_profession', 'mother_company',
             'mother_qualification', 'address', 'email', 'phone', 'schooling', 'specify', 'toilet',

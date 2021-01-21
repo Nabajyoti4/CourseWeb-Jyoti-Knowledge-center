@@ -19,6 +19,7 @@ class CreateStudentsTable extends Migration
             $table->unsignedBigInteger('immunation_id')->index();
             $table->string('admission_sought');
             $table->string('batch');
+            $table->string('course');
             $table->date('dob');
             $table->string('name');
             $table->string('image');
