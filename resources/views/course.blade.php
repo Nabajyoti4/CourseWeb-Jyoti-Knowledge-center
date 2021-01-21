@@ -196,16 +196,16 @@
                 <div class="course-info d-flex justify-content-between align-items-center">
                     @if($id == 1)
                         <a href="{{route('from-one')}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
-                        <a href="{{route('from-one')}}" class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
+                        <a href="{{asset('images/1.pdf')}}" class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
                     @elseif($id == 2)
                         <a href="{{route('from-two')}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
-                        <a href="{{route('from-two')}}" class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
+                        <a href="{{asset('images/2.pdf')}}"  class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
                     @elseif($id == 3)
                         <a href="{{route('from-three')}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
-                        <a href="{{route('from-three')}}" class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
+                        <a href="{{asset('images/3.jpeg')}}"  class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
                     @elseif($id == 4)
                         <a href="{{route('from-four')}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
-                        <a href="{{route('from-four')}}" class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
+                        <a href="{{asset('images/4.pdf')}}"  class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
                     @endif
 
                 </div>

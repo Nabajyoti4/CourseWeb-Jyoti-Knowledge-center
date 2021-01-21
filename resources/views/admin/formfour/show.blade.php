@@ -54,6 +54,7 @@
                             <div class="row form-group">
                                 <div class="col-md-12">
                                     <label for="image" class="font-weight-bold">Passport Size photo: </label>
+                                    <img src="{{asset('storage/'.$record->image)}}" style="height: 200px; width: 200px; background-size: cover;" alt="">
                                 </div>
                             </div>
 

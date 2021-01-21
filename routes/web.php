@@ -37,9 +37,6 @@ Route::get('/form-three', function () {
 Route::post('/form-three/store', [StudentFormOneController::class, 'store'])->name('form-three.store');
 
 
-
-
-
 /**
  * store formtwo
  * */
@@ -108,3 +105,17 @@ Route::get('/admin/panel/formfour', [\App\Http\Controllers\Admin\FormFourControl
     ->name('admin.formfour.index');
 Route::get('/admin/panel/formfour/{id}', [\App\Http\Controllers\Admin\FormFourController::class, 'show'])
     ->name('admin.formfour.show');
+
+
+//form pdf
+Route::get('admin/panel/form-pdf', [\App\Http\Controllers\Admin\FormPdfController::class, 'index'])
+    ->name('admin.form-pdf.index');
+
+Route::patch('admin/panel/form-one/update', [\App\Http\Controllers\Admin\FormPdfController::class, 'update_form_one'])
+    ->name('admin.form-one.update');
+Route::patch('admin/panel/form-two/update', [\App\Http\Controllers\Admin\FormPdfController::class, 'update_form_two'])
+    ->name('admin.form-two.update');
+Route::patch('admin/panel/form-three/update', [\App\Http\Controllers\Admin\FormPdfController::class, 'update_form_three'])
+    ->name('admin.form-three.update');
+Route::patch('admin/panel/form-four/update', [\App\Http\Controllers\Admin\FormPdfController::class, 'update_form_four'])
+    ->name('admin.form-four.update');
