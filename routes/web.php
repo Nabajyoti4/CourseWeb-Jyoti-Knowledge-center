@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $courses = \App\Models\Course::all();
+    return view('welcome', compact('courses'));
 })->name('welcome');
 
 Route::get('/dashboard', function () {
@@ -30,7 +31,7 @@ Route::get('/course/{id}',[\App\Http\Controllers\CourseController::class, 'show'
 /**
  * Form one
  */
-Route::get('/form-three/', [StudentFormOneController::class, 'index'])->name('from-three');
+Route::get('/form-three/{course}', [StudentFormOneController::class, 'index'])->name('from-three');
 
 Route::post('/form-three/store', [StudentFormOneController::class, 'store'])->name('form-three.store');
 
@@ -41,20 +42,14 @@ Route::post('/form-three/store', [StudentFormOneController::class, 'store'])->na
 Route::post('/form-four/store', [FormTwoController::class, 'store'])
     ->name('from-four.store');
 
-Route::get('/form-four', function () {
-    return view('forms.formTwo.index');
-})->name('from-four');
+Route::get('/form-four/{course}', [FormTwoController::class, 'index'])->name('from-four');
 
 
 
 /**
  * store formthree
  * */
-
-Route::get('/form-two', function () {
-    return view('forms.formThree.index');
-})->name('from-two');
-
+Route::get('/form-two/{course}',[FormThreeController::class, 'index'])->name('from-two');
 Route::post('/form-two/store', [FormThreeController::class, 'store'])
     ->name('from-two.store');
 
@@ -62,9 +57,7 @@ Route::post('/form-two/store', [FormThreeController::class, 'store'])
 /**
  * formfour
  */
-Route::get('/form-one', function () {
-    return view('forms.formFour.index');
-})->name('from-one');
+Route::get('/form-one/{course}',[\App\Http\Controllers\FormFourController::class, 'index'])->name('from-one');
 
 Route::post('/form-one/store', [\App\Http\Controllers\FormFourController::class, 'store'])
     ->name('from-one.store');

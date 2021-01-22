@@ -507,42 +507,7 @@
     </script>
 @endif
 
-<nav class="navbar navbar-expand-lg p-1 navbar-dark fixed-top shadow" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="">
-            <img src="{{asset('images/navbar-logo.png')}}" style="height:60px;" alt=""/></a>
-        <button class="navbar-toggler navbar-toggler-right text-black-50" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ml-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto  font-weight-bold padd">
-                <li class="nav-item"><a class="nav-link" style="color:black" href="{{route('welcome')}}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" style="color:black" href="#about">About</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Courses
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" style="color:black" href="#">Jyoti Bright - Kids House</a>
-                        <a class="dropdown-item" style="color:black" href="#">Vedic Maths</a>
-                        <a class="dropdown-item" style="color:black" href="#">Mid Brain Activation</a>
-                        <a class="dropdown-item" style="color:black" href="#">DMIT Test</a>
-                        <a class="dropdown-item" style="color:black" href="#">Hand Writing</a>
-                        <a class="dropdown-item" style="color:black" href="#">Fine Arts</a>
-                        <a class="dropdown-item" style="color:black" href="#">Spoken English</a>
-                        <a class="dropdown-item" style="color:black" href="#">Coaching English</a>
-                        <a class="dropdown-item" style="color:black" href="#">Jyoti Public School</a>
-                        <a class="dropdown-item" style="color:black" href="#">Day Care Centre</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+@include('partials.navbar')
 
 <section class="breadcrumb breadcrumb_bg">
     <div class="container">
@@ -564,10 +529,11 @@
             <div class="container border bg-white rounded-lg">
                 <div class="row">
                     <div class="col-md-12 col-md-offset-1 animate-box">
-                        <h3>Admission application form</h3>
+                        <h3>Admission application form {{$course}}</h3>
                         <form action="{{route('from-two.store')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('POST')
+                            <input type="hidden" name="course" value="{{$course}}">
                             <div class="row form-group">
                                 <div class="col-md-12">
                                     <label for="name">Name: </label>

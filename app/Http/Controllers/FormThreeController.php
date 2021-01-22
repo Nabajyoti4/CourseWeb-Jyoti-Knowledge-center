@@ -3,10 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\FormThreeRequest;
+use App\Models\Course;
 use App\Models\FormThree;
 
 class FormThreeController extends Controller
 {
+
+    public function index($course){
+        $courses = Course::all();
+        return view('forms.formThree.index', compact('course', 'courses'));
+    }
+
+    /**
+     * @param FormThreeRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function store(FormThreeRequest $request)
     {
         $data = $request->only([

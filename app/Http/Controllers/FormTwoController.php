@@ -3,10 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\FormTwoRequest;
+use App\Models\Course;
 use App\Models\FormTwo;
 
 class FormTwoController extends Controller
 {
+
+    /**
+     * @param $course
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function index($course){
+        $courses = Course::all();
+        return view('forms.formTwo.index', compact('course', 'courses'));
+    }
     /**
      * Handle the incoming request.
      *

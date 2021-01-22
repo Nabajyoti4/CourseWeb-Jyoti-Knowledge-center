@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\FormFour;
 use Illuminate\Http\Request;
 
@@ -9,6 +10,14 @@ class FormFourController extends Controller
 {
     //
 
+    /**
+     * @param $course
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function index($course){
+        $courses = Course::all();
+        return view('forms.formFour.index', compact('course','courses'));
+    }
 
     /**
      * @param Request $request

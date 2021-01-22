@@ -510,42 +510,7 @@
     </script>
 @endif
 
-<nav class="navbar navbar-expand-lg p-1 navbar-dark fixed-top shadow" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="">
-            <img src="{{asset('images/navbar-logo.png')}}" style="height:60px;" alt=""/></a>
-        <button class="navbar-toggler navbar-toggler-right text-black-50" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ml-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto  font-weight-bold padd">
-                <li class="nav-item"><a class="nav-link" style="color:black" href="{{route('welcome')}}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" style="color:black" href="#about">About</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Courses
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" style="color:black" href="#">Jyoti Bright - Kids House</a>
-                        <a class="dropdown-item" style="color:black" href="#">Vedic Maths</a>
-                        <a class="dropdown-item" style="color:black" href="#">Mid Brain Activation</a>
-                        <a class="dropdown-item" style="color:black" href="#">DMIT Test</a>
-                        <a class="dropdown-item" style="color:black" href="#">Hand Writing</a>
-                        <a class="dropdown-item" style="color:black" href="#">Fine Arts</a>
-                        <a class="dropdown-item" style="color:black" href="#">Spoken English</a>
-                        <a class="dropdown-item" style="color:black" href="#">Coaching English</a>
-                        <a class="dropdown-item" style="color:black" href="#">Jyoti Public School</a>
-                        <a class="dropdown-item" style="color:black" href="#">Day Care Centre</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+@include('partials.navbar')
 
 <section class="breadcrumb breadcrumb_bg">
     <div class="container">
@@ -567,10 +532,10 @@
             <div class="container border bg-white rounded-lg">
                 <div class="row">
                     <div class="col-md-12 col-md-offset-1 animate-box">
-                        <h3>Admission application form</h3>
+                        <h3>Admission application form for {{$course}}</h3>
                         <form action="{{route('form-three.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
-
+                            <input type="hidden" name="course" value="{{$course}}">
                             <div class="row form-group">
                                 <div class="col-md-4">
                                     <label for="email" class="font-weight-bold">Admission sought in: </label>
@@ -581,9 +546,9 @@
                                     <label for="nursery">Nursery</label>
                                     <input type="checkbox" id="nursery" class="mr-3" name="admission_sought[]" value="nursery">
                                     <label for="LKG">LKG</label>
-                                    <input type="checkbox" id="LKG" class="mr-3" name="admission_sought[]" value="LKG">
+                                    <input  type="checkbox" id="LKG" class="mr-3" name="admission_sought[]" value="LKG">
                                     <label for="UKG">UKG</label>
-                                    <input type="checkbox" id="UKG" class="mr-3" name="admission_sought[]" value="UKG">
+                                    <input  type="checkbox" id="UKG" class="mr-3" name="admission_sought[]" value="UKG">
                                 </div>
                             </div>
 
@@ -593,20 +558,20 @@
                                 </div>
                                 <div class="col-md-8">
                                     <label for="morning">Morning</label>
-                                    <input type="radio" class="mr-3" id="LKG" name="batch" value="morning">
+                                    <input required type="radio" class="mr-3" id="LKG" name="batch" value="morning">
                                     <label for="afternoon">Afternoon</label>
-                                    <input type="radio" class="mr-3" id="UKG" name="batch" value="afternoon">
+                                    <input required type="radio" class="mr-3" id="UKG" name="batch" value="afternoon">
                                 </div>
                             </div>
 
                             <div class="row form-group">
                                 <div class="col-md-6">
                                     <label for="dob" class="font-weight-bold">Date of birth</label>
-                                    <input type="date" class="form-control mb-3"  name="dob">
+                                    <input required type="date" class="form-control mb-3"  name="dob">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="image" class="font-weight-bold">Photo</label>
-                                    <input type="file" class="form-control mb-3"  name="image">
+                                    <input required type="file" class="form-control mb-3"  name="image">
                                 </div>
 
                             </div>
@@ -614,19 +579,19 @@
                             <div class="row form-group">
                                 <div class="col-md-12">
                                     <label for="name" class="font-weight-bold">Name of Child: </label>
-                                    <input type="text" class="form-control mb-3" placeholder="Your name"
+                                    <input required type="text" class="form-control mb-3" placeholder="Your name"
                                            name="name">
                                 </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-md-6">
                                     <label for="father_name" class="font-weight-bold">Father's Name: </label>
-                                    <input type="text" class="form-control mb-3" placeholder="Your fathername"
+                                    <input required type="text" class="form-control mb-3" placeholder="Your fathername"
                                            name="father_name">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="mother_name" class="font-weight-bold">Mother's Name: </label>
-                                    <input type="text" class="form-control mb-3" placeholder="Your mothername"
+                                    <input required type="text" class="form-control mb-3" placeholder="Your mothername"
                                            name="mother_name">
                                 </div>
                             </div>
@@ -634,7 +599,7 @@
                             <div class="row form-group">
                                 <div class="col-md-12">
                                     <label for="address" class="font-weight-bold">Address: </label>
-                                    <textarea type="text" class="form-control mb-3" cols="30" rows="5"
+                                    <textarea required type="text" class="form-control mb-3" cols="30" rows="5"
                                               placeholder="Your address" name="address"></textarea>
                                 </div>
                             </div>
@@ -642,11 +607,11 @@
                             <div class="row form-group">
                                 <div class="col-md-6">
                                     <label for="email" class="font-weight-bold">Email: </label>
-                                    <input type="email" class="form-control mb-3" placeholder="Your email" name="email">
+                                    <input required type="email" class="form-control mb-3" placeholder="Your email" name="email">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="phone" class="font-weight-bold">Phone No: </label>
-                                    <input type="text" class="form-control mb-3" placeholder="Your phone no"
+                                    <input required type="text" class="form-control mb-3" placeholder="Your phone no"
                                            name="phone">
                                 </div>
                             </div>
@@ -657,12 +622,12 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label for="father_number" class="font-weight-bold">Father Number: </label>
-                                    <input type="text" class="form-control mb-3" placeholder="Your father no"
+                                    <input required type="text" class="form-control mb-3" placeholder="Your father no"
                                            name="father_phone">
                                 </div>
                                 <div class="col-md-4">
                                     <label for="mother_number" class="font-weight-bold">Mother Number: </label>
-                                    <input type="text" class="form-control mb-3" placeholder="Your mother no"
+                                    <input required type="text" class="form-control mb-3" placeholder="Your mother no"
                                            name="mother_phone">
                                 </div>
                             </div>
@@ -674,9 +639,9 @@
 
                                 <div class="col-md-8">
                                     <label for="yes" class="font-weight-bold">Yes</label>
-                                    <input type="radio" id="playground" class="mr-3" name="schooling" value="yes">
+                                    <input  required type="radio" id="playground" class="mr-3" name="schooling" value="yes">
                                     <label for="no" class="font-weight-bold">No</label>
-                                    <input type="radio" id="nursery" class="mr-3" name="schooling" value="no">
+                                    <input  required type="radio" id="nursery" class="mr-3" name="schooling" value="no">
                                     <label for="specify" class="font-weight-bold">If yes specify: </label>
                                     <textarea type="text" class="form-control mb" cols="30" rows="3"
                                               placeholder="specify" name="specify"></textarea>
@@ -690,9 +655,9 @@
 
                                 <div class="col-md-8">
                                     <label for="yes" class="font-weight-bold">Yes</label>
-                                    <input type="radio" class="mr-3" id="playground" name="toilet" value="yes">
+                                    <input  required type="radio" class="mr-3" id="playground" name="toilet" value="yes">
                                     <label for="no" class="font-weight-bold">No</label>
-                                    <input type="radio" class="mr-3" id="nursery" name="toilet" value="no">
+                                    <input  required type="radio" class="mr-3" id="nursery" name="toilet" value="no">
                                 </div>
                             </div>
 
@@ -700,7 +665,7 @@
                                 <div class="col-md-12">
                                     <label for="siblings" class="font-weight-bold">How many siblings does the children have? Give age
                                         details: </label>
-                                    <textarea type="text" class="form-control mb" cols="30" rows="3"
+                                    <textarea  required type="text" class="form-control mb" cols="30" rows="3"
                                               placeholder="siblings" name="siblings"></textarea>
                                 </div>
                             </div>
@@ -710,13 +675,13 @@
                                 <div class="row form-group">
                                     <div class="col-md-12">
                                         <label for="father_profession">Profession: </label>
-                                        <input type="text" class="form-control mb-2" placeholder="Your father profession"
+                                        <input  required type="text" class="form-control mb-2" placeholder="Your father profession"
                                                name="father_profession">
                                         <label for="father_company">Company/Designation: </label>
-                                        <input type="text" class="form-control mb-2" placeholder="Your father company or designation"
+                                        <input  required type="text" class="form-control mb-2" placeholder="Your father company or designation"
                                                name="father_company">
                                         <label for="father_qualification">Qualification: </label>
-                                        <input type="text" class="form-control mb-2" placeholder="Your qualification"
+                                        <input  required type="text" class="form-control mb-2" placeholder="Your qualification"
                                                name="father_qualification">
                                     </div>
                                 </div>
@@ -726,13 +691,13 @@
                                 <div class="row form-group">
                                     <div class="col-md-12">
                                         <label for="mother_profession">Profession: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your mother profession"
+                                        <input  required type="text" class="form-control mb" placeholder="Your mother profession"
                                                name="mother_profession">
                                         <label for="mother_company">Company/Designation: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your mother company or designation"
+                                        <input  required type="text" class="form-control mb" placeholder="Your mother company or designation"
                                                name="mother_company">
                                         <label for="mother_qualification">Qualification: </label>
-                                        <input type="text" class="form-control mb" placeholder="Your mother qualification"
+                                        <input  required type="text" class="form-control mb" placeholder="Your mother qualification"
                                                name="mother_qualification">
                                     </div>
                                 </div>
@@ -744,28 +709,28 @@
                                 <div class="row form-group">
                                     <div class="col-md-12">
                                         <label for="diseases">Sepecific disease suffered in the past , if any: </label>
-                                        <input type="text" class="form-control mb" placeholder="diseases"
+                                        <input  required type="text" class="form-control mb" placeholder="diseases"
                                                name="diseases">
                                         <label for="operation">Operations undergone in the past , if any: </label>
-                                        <input type="text" class="form-control mb" placeholder="operation"
+                                        <input  required type="text" class="form-control mb" placeholder="operation"
                                                name="operation">
                                         <label for="allergy">Allergies, if Any: </label>
-                                        <input type="text" class="form-control mb" placeholder="allergy"
+                                        <input  required type="text" class="form-control mb" placeholder="allergy"
                                                name="allergy">
                                         <label for="medication">Any other diseases for which child on regular medication: </label>
-                                        <input type="text" class="form-control mb" placeholder="medication"
+                                        <input  required type="text" class="form-control mb" placeholder="medication"
                                                name="medication">
                                         <label for="phobia">Does your child suffer from any phobias?: </label>
-                                        <input type="text" class="form-control mb" placeholder="phobia"
+                                        <input  required type="text" class="form-control mb" placeholder="phobia"
                                                name="phobia">
                                         <label for="instructions">Any special instructions: </label>
-                                        <textarea type="text" class="form-control mb" cols="30" rows="3"
+                                        <textarea  required type="text" class="form-control mb" cols="30" rows="3"
                                                   placeholder="instructions" name="instructions"></textarea>
                                         <label for="height">Height (in cms): </label>
-                                        <input type="text" class="form-control mb" placeholder="Your height"
+                                        <input  required type="text" class="form-control mb" placeholder="Your height"
                                                name="height">
                                         <label for="weight">Weight (in kgs): </label>
-                                        <input type="text" class="form-control mb" placeholder="Your weight"
+                                        <input  required type="text" class="form-control mb" placeholder="Your weight"
                                                name="weight">
                                     </div>
                                 </div>
@@ -791,68 +756,68 @@
                                                         <tr>
                                                             <td>A) BCG</td>
                                                             <td>(0-2 weeks)</td>
-                                                            <td><input type="radio" name="bcg" value="yes"></td>
-                                                            <td><input type="radio" name="bcg" value="no"></td>
+                                                            <td><input  required type="radio" name="bcg" value="yes"></td>
+                                                            <td><input  required type="radio" name="bcg" value="no"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>B) DPT(I,II,III)</td>
                                                             <td>(6-24 weeks)</td>
-                                                            <td><input type="radio" name="dpt" value="yes"></td>
-                                                            <td><input type="radio" name="dpt" value="no"></td>
+                                                            <td><input  required type="radio" name="dpt" value="yes"></td>
+                                                            <td><input  required type="radio" name="dpt" value="no"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>C) Oral Polio Vacchine(OPV)</td>
                                                             <td>(6 doses)</td>
-                                                            <td><input type="radio"  name="polio" value="yes"></td>
-                                                            <td><input type="radio"  name="polio" value="no"></td>
+                                                            <td><input  required type="radio"  name="polio" value="yes"></td>
+                                                            <td><input  required type="radio"  name="polio" value="no"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>D) Measles</td>
                                                             <td>(8-9 months)</td>
-                                                            <td><input type="radio"  name="measles" value="yes"></td>
-                                                            <td><input type="radio"  name="measles" value="no"></td>
+                                                            <td><input  required type="radio"  name="measles" value="yes"></td>
+                                                            <td><input  required type="radio"  name="measles" value="no"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>E) MMR</td>
                                                             <td>(15-18 months)</td>
-                                                            <td><input type="radio"  name="mmr" value="yes"></td>
-                                                            <td><input type="radio"  name="mmr" value="no"></td>
+                                                            <td><input  required type="radio"  name="mmr" value="yes"></td>
+                                                            <td><input  required type="radio"  name="mmr" value="no"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>F) DT</td>
                                                             <td>(4-6 years)</td>
-                                                            <td><input type="radio"  name="dt" value="yes"></td>
-                                                            <td><input type="radio"  name="dt" value="no"></td>
+                                                            <td><input required  type="radio"  name="dt" value="yes"></td>
+                                                            <td><input  required type="radio"  name="dt" value="no"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>G) HBV - Hepatitus(I,II,III)</td>
                                                             <td>(upto 24 weeks)</td>
-                                                            <td><input type="radio"  name="hbv" value="yes"></td>
-                                                            <td><input type="radio"  name="hbv" value="no"></td>
+                                                            <td><input  required type="radio"  name="hbv" value="yes"></td>
+                                                            <td><input required  type="radio"  name="hbv" value="no"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>H) Hi B(Meningitis-3doses)</td>
                                                             <td>(Under 1 year)</td>
-                                                            <td><input type="radio"  name="hib" value="yes"></td>
-                                                            <td><input type="radio"  name="hib" value="no"></td>
+                                                            <td><input  required type="radio"  name="hib" value="yes"></td>
+                                                            <td><input  required type="radio"  name="hib" value="no"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>I) Chicken Pox</td>
                                                             <td>(after 1 year of age)</td>
-                                                            <td><input type="radio"  name="chicken" value="yes"></td>
-                                                            <td><input type="radio"  name="chicken" value="no"></td>
+                                                            <td><input  required type="radio"  name="chicken" value="yes"></td>
+                                                            <td><input  required type="radio"  name="chicken" value="no"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>J) Typhoid</td>
                                                             <td>(after 2 years of age)</td>
-                                                            <td><input type="radio"  name="typhoid" value="yes"></td>
-                                                            <td><input type="radio"  name="typhoid" value="no"></td>
+                                                            <td><input  required type="radio"  name="typhoid" value="yes"></td>
+                                                            <td><input  required type="radio"  name="typhoid" value="no"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>K) Hepatitis A(2 doses)</td>
                                                             <td>(after 1 year of age)</td>
-                                                            <td><input type="radio"  name="hepatitis" value="yes"></td>
-                                                            <td><input type="radio"  name="hepatitis" value="no"></td>
+                                                            <td><input  required type="radio"  name="hepatitis" value="yes"></td>
+                                                            <td><input  required type="radio"  name="hepatitis" value="no"></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -865,7 +830,7 @@
                             <div class="row form-group">
                                 <div class="col-md-12">
                                     <label for="strength" class="font-weight-bold">What are your Child's strengths as you see?: </label>
-                                    <textarea type="text" class="form-control mb" cols="30" rows="5"
+                                    <textarea  required type="text" class="form-control mb" cols="30" rows="5"
                                               placeholder="Your strength" name="strength"></textarea>
                                 </div>
                             </div>
@@ -873,7 +838,7 @@
                             <div class="row form-group">
                                 <div class="col-md-12">
                                 <label for="development" class="font-weight-bold">What are his/her key developmental needs as you suggest in next 12 months?: </label>
-                                    <textarea type="text" class="form-control mb" cols="30" rows="5"
+                                    <textarea  required type="text" class="form-control mb" cols="30" rows="5"
                                               placeholder="Your development" name="development"></textarea>
                                 </div>
                             </div>
@@ -881,7 +846,7 @@
                             <div class="row form-group">
                                 <div class="col-md-12">
                                     <label for="activities" class="font-weight-bold" >What are the activities he/she likes?: </label>
-                                    <textarea type="text" class="form-control mb" cols="30" rows="5"
+                                    <textarea  required type="text" class="form-control mb" cols="30" rows="5"
                                               placeholder="Your activities" name="activities"></textarea>
                                 </div>
                             </div>

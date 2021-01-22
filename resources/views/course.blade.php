@@ -105,42 +105,7 @@
 
 <!-- Links -->
 
-<nav class="navbar navbar-expand-lg p-1 navbar-dark fixed-top shadow" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="">
-            <img src="{{asset('images/navbar-logo.png')}}"  style="height:60px;" alt=""/></a>
-        <button class="navbar-toggler navbar-toggler-right text-black-50" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ml-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto  font-weight-bold padd">
-                <li class="nav-item"><a class="nav-link" style="color:black" href="{{route('welcome')}}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" style="color:black" href="#about">About</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Courses
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 3 )}}">Jyoti Bright - Kids House</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 4 )}}">Vedic Maths</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 4 )}}">Mid Brain Activation</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 4 )}}">DMIT Test</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 1 )}}">Hand Writing</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 1 )}}">Fine Arts</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 1 )}}">Spoken English</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 1 )}}">Coaching English</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 3 )}}">Jyoti Public School</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 2 )}}">Day Care Centre</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+@include('partials.navbar');
 
 <section class="breadcrumb breadcrumb_bg">
     <div class="container">
@@ -160,56 +125,35 @@
 <section id="course-details" class="course-details">
     <div class="container" data-aos="fade-up" data-aos-duration="1000">
         <div class="section-title">
-            <p>Course Name</p>
+            <p>{{$course->title}}</p>
         </div>
         <div class="row">
             <div class="col-lg-8">
-                <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="">
-                <h3>Et enim incidunt fuga tempora</h3>
+                <img src="{{asset('storage/'.$course->image)}}" class="img-fluid" alt="">
+                <h3>{{$course->title}}</h3>
                 <p>
-                    Qui et explicabo voluptatem et ab qui vero et voluptas. Sint voluptates temporibus quam autem. Atque nostrum voluptatum laudantium a doloremque enim et ut dicta. Nostrum ducimus est iure minima totam doloribus nisi ullam deserunt. Corporis aut officiis sit nihil est. Labore aut sapiente aperiam.
-                    Qui voluptas qui vero ipsum ea voluptatem. Omnis et est. Voluptatem officia voluptatem adipisci et iusto provident doloremque consequatur. Quia et porro est. Et qui corrupti laudantium ipsa.
-                    Eum quasi saepe aperiam qui delectus quaerat in. Vitae mollitia ipsa quam. Ipsa aut qui numquam eum iste est dolorum. Rem voluptas ut sit ut.
+                    {{$course->description}}
                 </p>
             </div>
             <div class="col-lg-4">
 
                 <div class="course-info d-flex justify-content-between align-items-center">
-                    <h5>Trainer</h5>
-                    <p><a href="#">Walter White</a></p>
-                </div>
-
-                <div class="course-info d-flex justify-content-between align-items-center">
                     <h5>Course Fee</h5>
-                    <p>₹165</p>
+                    <p>₹{{$course->price}}</p>
                 </div>
 
                 <div class="course-info d-flex justify-content-between align-items-center">
-                    <h5>Available Seats</h5>
-                    <p>30</p>
+                    @if($course->form_no == 1)
+                        <a href="{{route('from-one', $course->title)}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
+                    @elseif($course->form_no== 2)
+                        <a href="{{route('from-two' , $course->title)}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
+                    @elseif($course->form_no == 3)
+                        <a href="{{route('from-three' , $course->title)}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
+                    @elseif($course->form_no == 4)
+                        <a href="{{route('from-four' , $course->title)}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
+                        @endif
+                    <a href="{{asset('storage/'.$course->form)}}" target="_blank" class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
                 </div>
-
-                <div class="course-info d-flex justify-content-between align-items-center">
-                    <h5>Schedule</h5>
-                    <p>5.00 pm - 7.00 pm</p>
-                </div>
-                <div class="course-info d-flex justify-content-between align-items-center">
-                    @if($id == 1)
-                        <a href="{{route('from-one')}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
-                        <a href="{{asset('images/1.pdf')}}" class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
-                    @elseif($id == 2)
-                        <a href="{{route('from-two')}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
-                        <a href="{{asset('images/2.pdf')}}"  class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
-                    @elseif($id == 3)
-                        <a href="{{route('from-three')}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
-                        <a href="{{asset('images/3.jpeg')}}"  class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
-                    @elseif($id == 4)
-                        <a href="{{route('from-four')}}" class="btn-success p-2 sm:rounded-lg">Apply Online</a>
-                        <a href="{{asset('images/4.pdf')}}"  class="btn-success p-2 sm:rounded-lg">Apply Offline</a>
-                    @endif
-
-                </div>
-
             </div>
         </div>
 

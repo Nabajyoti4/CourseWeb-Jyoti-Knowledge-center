@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\Immunation;
 use App\Models\Medical;
 use App\Models\Student;
@@ -15,7 +16,8 @@ class StudentFormOneController extends Controller
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index($course){
-        return view('forms.formOne.index', compact('course'));
+        $courses = Course::all();
+        return view('forms.formOne.index', compact('course', 'courses'));
     }
 
     /**

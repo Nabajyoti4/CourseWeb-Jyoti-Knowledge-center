@@ -490,105 +490,9 @@
     </style>
 </head>
 <body>
-{{--            @if (Route::has('login'))--}}
-{{--                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">--}}
-{{--                    @auth--}}
-{{--                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>--}}
-{{--                    @else--}}
-{{--                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>--}}
-
-{{--                        @if (Route::has('register'))--}}
-{{--                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>--}}
-{{--                        @endif--}}
-{{--                    @endauth--}}
-{{--                </div>--}}
-{{--            @endif--}}
-
-
 <!-- Links -->
-<nav class="navbar navbar-expand-lg p-1 navbar-dark fixed-top shadow" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="">
-            <img src="{{asset('images/69.png')}}" style="height:60px;" alt=""/></a>
-        <button class="navbar-toggler navbar-toggler-right text-black-50" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
+@include('partials.navbar')
 
-            <i class="fas fa-bars ml-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto  font-weight-bold padd">
-                <li class="nav-item  "><a class="nav-link" style="color:black" href="{{route('welcome')}}">Home</a></li>
-                <li class="nav-item "><a class="nav-link" style="color:black" href="#about">About</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Courses
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 3 )}}">Jyoti Bright - Kids House</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 4 )}}">Vedic Maths</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 4 )}}">Mid Brain Activation</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 4 )}}">DMIT Test</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 1 )}}">Hand Writing</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 1 )}}">Fine Arts</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 1 )}}">Spoken English</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 1 )}}">Coaching English</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 3 )}}">Jyoti Public School</a>
-                        <a class="dropdown-item" style="color:black" href="{{route('course', 2 )}}">Day Care Centre</a>
-                    </div>
-                </li>
-                <li class="nav-item"><a class="nav-link" style="color:black" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-{{--<nav class="navbar navbar-expand-lg pt-4 pb-4 bg-success fixed-top">--}}
-{{--    <div class="container-fluid">--}}
-{{--        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"--}}
-{{--                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"--}}
-{{--                aria-label="Toggle navigation">--}}
-{{--            <span class="navbar-toggler-icon"></span>--}}
-{{--        </button>--}}
-{{--        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">--}}
-{{--            <a class="text-white nav-name mr-5" href="{{route('welcome')}}">Jyoti knowledge Center</a>--}}
-{{--            <ul class="navbar-nav d-flex align-content-end mb-2 mb-lg-0">--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link active text-white subtitle" aria-current="page"--}}
-{{--                       href="{{route('welcome')}}">Home</a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link text-white subtitle" href="#">About us</a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item dropdown">--}}
-{{--                    <a class="nav-link dropdown-toggle text-white subtitle" href="#" id="navbarDropdown" role="button"--}}
-{{--                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--                        Courses--}}
-{{--                    </a>--}}
-{{--                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
-{{--                        <a class="dropdown-item" href="#">Course Name</a>--}}
-{{--                        <a class="dropdown-item" href="#">Course Name</a>--}}
-{{--                    </div>--}}
-{{--                </li>--}}
-{{--            </ul>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</nav>--}}
-<!-- End Header -->
-{{--<div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000">--}}
-{{--    <div class="carousel-inner" role="listbox">--}}
-{{--        <div class="item active background a"></div>--}}
-{{--        <div class="item background b"></div>--}}
-{{--        <div class="item background c"></div>--}}
-{{--    </div>--}}
-{{--</div>--}}
-
-{{--<div class="covertext">--}}
-{{--    <div class="col-lg-10" style="float:none; margin:0 auto;">--}}
-{{--        <h1 class="title">Jyoti Knowledge Center</h1>--}}
-{{--        <h3 class="subtitle">Online platform for courses</h3>--}}
-{{--    </div>--}}
-{{--</div>--}}
 <div id="carouselExampleCaptions" class="carousel carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -714,205 +618,24 @@
             </div>
 
             <div class="row" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                @foreach($courses as $course)
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 ">
                     <div class="course-item shadow">
-                        <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
+                        <img src="{{asset('storage/'.$course->image)}}" class="img-fluid" alt="...">
                         <div class="course-content">
-                            <h3><a href="{{route('course', 3)}}">Jyoti Bright - Kids House</a></h3>
-                            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores
-                                dolorem tempore.</p>
+                            <h3><a href="{{route('course', $course->id)}}">{{$course->title}}</a></h3>
+                            <p style="height: 60px;line-height: 20px; overflow: hidden">{{$course->description}}</p>
                             <div class="trainer d-flex justify-content-between align-items-center">
                             </div>
                             <div class="text-center">
-                                <a href="{{route('course', 3)}}" style="background:#5fcf80" class="btn btn-primary">Learn More <i
+                                <a href="{{route('course', $course->id)}}" style="background:#5fcf80" class="btn btn-primary">Learn More <i
                                         class="bx bx-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
 
                 </div> <!-- End Course Item-->
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="course-item shadow">
-                        <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
-                        <div class="course-content">
-
-                            <h3><a href="{{route('course', 4)}}">Vedic Maths</a></h3>
-                            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores
-                                dolorem tempore.</p>
-                            <div class="trainer d-flex justify-content-between align-items-center">
-                                <div class="trainer-profile d-flex align-items-center">
-                                </div>
-
-                            </div>
-                            <div class="text-center">
-                                <a href="{{route('course', 4)}}" style="background:#5fcf80" class="btn btn-primary">Learn More <i
-                                        class="bx bx-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Course Item-->
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="course-item shadow">
-                        <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
-                        <div class="course-content">
-
-                            <h3><a href="{{route('course', 4)}}">Mid Brain Activation</a></h3>
-                            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores
-                                dolorem tempore.</p>
-                            <div class="trainer d-flex justify-content-between align-items-center">
-                                <div class="trainer-profile d-flex align-items-center">
-                                </div>
-
-                            </div>
-                            <div class="text-center">
-                                <a href="{{route('course', 4)}}" style="background:#5fcf80" class="btn btn-primary">Learn More <i
-                                        class="bx bx-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Course Item-->
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="course-item shadow">
-                        <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
-                        <div class="course-content">
-
-                            <h3><a href="{{route('course', 4)}}">DMIT Test</a></h3>
-                            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores
-                                dolorem tempore.</p>
-                            <div class="trainer d-flex justify-content-between align-items-center">
-                                <div class="trainer-profile d-flex align-items-center">
-                                </div>
-
-                            </div>
-                            <div class="text-center">
-                                <a href="{{route('course', 4)}}" style="background:#5fcf80" class="btn btn-primary">Learn More <i
-                                        class="bx bx-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Course Item-->
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="course-item shadow">
-                        <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
-                        <div class="course-content">
-
-                            <h3><a href="{{route('course', 1)}}">Hand Writting ( Eng, Assamese, Hindi)</a></h3>
-                            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores
-                                dolorem tempore.</p>
-                            <div class="trainer d-flex justify-content-between align-items-center">
-                                <div class="trainer-profile d-flex align-items-center">
-                                </div>
-
-                            </div>
-                            <div class="text-center">
-                                <a href="{{route('course',1)}}" style="background:#5fcf80" class="btn btn-primary">Learn More <i
-                                        class="bx bx-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Course Item-->
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="course-item shadow">
-                        <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
-                        <div class="course-content">
-
-                            <h3><a href="{{route('course',1)}}">Fine Arts</a></h3>
-                            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores
-                                dolorem tempore.</p>
-                            <div class="trainer d-flex justify-content-between align-items-center">
-                                <div class="trainer-profile d-flex align-items-center">
-                                </div>
-
-                            </div>
-                            <div class="text-center">
-                                <a href="{{route('course',1)}}" style="background:#5fcf80" class="btn btn-primary">Learn More <i
-                                        class="bx bx-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Course Item-->
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="course-item shadow">
-                        <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
-                        <div class="course-content">
-
-                            <h3><a href="{{route('course',1)}}">Spoken English</a></h3>
-                            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores
-                                dolorem tempore.</p>
-                            <div class="trainer d-flex justify-content-between align-items-center">
-                                <div class="trainer-profile d-flex align-items-center">
-                                </div>
-
-                            </div>
-                            <div class="text-center">
-                                <a href="{{route('course',1)}}" style="background:#5fcf80" class="btn btn-primary">Learn More <i
-                                        class="bx bx-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Course Item-->
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="course-item shadow">
-                        <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
-                        <div class="course-content">
-
-                            <h3><a href="{{route('course',1)}}">Coaching English</a></h3>
-                            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores
-                                dolorem tempore.</p>
-                            <div class="trainer d-flex justify-content-between align-items-center">
-                                <div class="trainer-profile d-flex align-items-center">
-                                </div>
-
-                            </div>
-                            <div class="text-center">
-                                <a href="{{route('course',1)}}" style="background:#5fcf80" class="btn btn-primary">Learn More <i
-                                        class="bx bx-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Course Item-->
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="course-item shadow">
-                        <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
-                        <div class="course-content">
-
-                            <h3><a href="{{route('course',3)}}">Jyoti Public School</a></h3>
-                            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores
-                                dolorem tempore.</p>
-                            <div class="trainer d-flex justify-content-between align-items-center">
-                                <div class="trainer-profile d-flex align-items-center">
-                                </div>
-
-                            </div>
-                            <div class="text-center">
-                                <a href="{{route('course',3)}}" style="background:#5fcf80" class="btn btn-primary">Learn More <i
-                                        class="bx bx-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Course Item-->
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="course-item shadow">
-                        <img src="{{asset('images/nature_big_5.jpg')}}" class="img-fluid" alt="...">
-                        <div class="course-content">
-
-                            <h3><a href="{{route('course',2)}}">Day Care Centre</a></h3>
-                            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores
-                                dolorem tempore.</p>
-                            <div class="trainer d-flex justify-content-between align-items-center">
-                                <div class="trainer-profile d-flex align-items-center">
-                                </div>
-
-                            </div>
-                            <div class="text-center">
-                                <a href="{{route('course',2)}}" style="background:#5fcf80" class="btn btn-primary">Learn More <i
-                                        class="bx bx-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Course Item-->
-
+                @endforeach
             </div>
 
         </div>
