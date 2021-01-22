@@ -853,7 +853,7 @@
 
 
                             <div class="form-group text-center">
-                                <input type="submit" value="Send Message" class="btn btn-primary">
+                                <input type="submit" value="Submit Form" class="btn btn-primary">
                             </div>
                         </form>
                     </div>

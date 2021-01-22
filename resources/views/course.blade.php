@@ -121,6 +121,7 @@
         </div>
     </div>
 </section>
+
 <main>
 <section id="course-details" class="course-details">
     <div class="container" data-aos="fade-up" data-aos-duration="1000">

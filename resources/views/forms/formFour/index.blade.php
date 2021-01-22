@@ -536,8 +536,8 @@
                             <input type="hidden" name="course" value="{{$course}}">
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="name">Name of child: </label>
-                                    <input type="text" class="form-control mb @error('name') is-invalid @enderror" placeholder="Your firstname"
+                                    <label class="font-weight-bold" for="name">Name of child: </label>
+                                    <input required type="text" class="form-control mb @error('name') is-invalid @enderror" placeholder="Your firstname"
                                            name="name" value="{{ old('name') }}">
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -548,8 +548,8 @@
                             </div>
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="image">Passport Size photo: </label>
-                                    <input type="file" class="form-control mb  @error('image') is-invalid @enderror"
+                                    <label class="font-weight-bold" for="image">Passport Size photo: </label>
+                                    <input required type="file" class="form-control mb  @error('image') is-invalid @enderror"
                                            name="image">
                                     @error('image')
                                     <span class="invalid-feedback" role="alert">
@@ -561,8 +561,8 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="age">Age</label>
-                                    <input type="text" class="form-control @error('age') is-invalid @enderror" name="age" placeholder="your age"
+                                    <label class="font-weight-bold" for="age">Age</label>
+                                    <input required type="text" class="form-control @error('age') is-invalid @enderror" name="age" placeholder="your age"
                                            value="{{ old('age') }}">
                                     @error('age')
                                     <span class="invalid-feedback" role="alert">
@@ -574,14 +574,14 @@
 
                             <div class="row form-group">
                                 <div class="col-md-4">
-                                    <label for="gender">Gender: </label>
+                                    <label class="font-weight-bold" for="gender">Gender: </label>
                                 </div>
                                 <div class="col-md-8 @error('gender') is-invalid @enderror">
                                     <label for="male">Male: </label>
-                                    <input type="radio"
+                                    <input required type="radio"
                                            name="gender" value="male">
                                     <label for=female>Female: </label>
-                                    <input type="radio"
+                                    <input required type="radio"
                                            name="gender" value="female">
                                 </div>
                                 @error('gender')
@@ -594,8 +594,8 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="father_name">Father's Name: </label>
-                                    <input type="text" class="form-control mb @error('father_name') is-invalid @enderror" placeholder="Your Father's name"
+                                    <label class="font-weight-bold" for="father_name">Father's Name: </label>
+                                    <input required type="text" class="form-control mb @error('father_name') is-invalid @enderror" placeholder="Your Father's name"
                                            name="father_name" value="{{ old('father_name') }}">
                                     @error('father_name')
                                     <span class="invalid-feedback" role="alert">
@@ -607,8 +607,8 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="father_phone">Phone No: </label>
-                                    <input type="text" class="form-control mb @error('father_phone') is-invalid @enderror" placeholder="Your Father's Contact"
+                                    <label class="font-weight-bold" for="father_phone">Phone No: </label>
+                                    <input required type="text" class="form-control mb @error('father_phone') is-invalid @enderror" placeholder="Your Father's Contact"
                                            name="father_phone" value="{{ old('father_phone') }}">
                                     @error('father_phone')
                                     <span class="invalid-feedback" role="alert">
@@ -625,8 +625,8 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="mother_name">Mother's Name: </label>
-                                    <input type="text" class="form-control mb @error('mother_name') is-invalid @enderror" placeholder="Your Mother's  name"
+                                    <label class="font-weight-bold" for="mother_name">Mother's Name: </label>
+                                    <input required type="text" class="form-control mb @error('mother_name') is-invalid @enderror" placeholder="Your Mother's  name"
                                            name="mother_name" value="{{ old('mother_name') }}">
                                     @error('mother_name')
                                     <span class="invalid-feedback" role="alert">
@@ -639,8 +639,8 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="mother_phone">Phone No: </label>
-                                    <input type="text" class="form-control mb @error('mother_phone') is-invalid @enderror" placeholder="Your Mother's Contact"
+                                    <label class="font-weight-bold" for="mother_phone">Phone No: </label>
+                                    <input required type="text" class="form-control mb @error('mother_phone') is-invalid @enderror" placeholder="Your Mother's Contact"
                                            name="mother_phone" value="{{ old('mother_phone') }}">
                                     @error('mother_phone')
                                     <span class="invalid-feedback" role="alert">
@@ -652,8 +652,8 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="emergency">Emergency contact and authorized pickup person: </label>
-                                    <input type="text" class="form-control mb @error('emergency') is-invalid @enderror"
+                                    <label class="font-weight-bold" for="emergency">Emergency contact and authorized pickup person: </label>
+                                    <input required type="text" class="form-control mb @error('emergency') is-invalid @enderror"
                                            placeholder="Your emergency contact" name="emergency" value="{{ old('emergency') }}">
                                     @error('emergency')
                                     <span class="invalid-feedback" role="alert">
@@ -665,8 +665,8 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="email">Email: </label>
-                                    <input type="email" class="form-control mb @error('email') is-invalid @enderror"
+                                    <label class="font-weight-bold" for="email">Email: </label>
+                                    <input required type="email" class="form-control mb @error('email') is-invalid @enderror"
                                            placeholder="Your email" name="email" value="{{ old('email') }}">
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -678,8 +678,8 @@
 
                             <div class="row form-group">
                                 <div class="col-md-6 col-sm-6">
-                                    <label for="from">Pickup timing from: </label>
-                                    <input type="text" class="form-control mb @error('from') is-invalid @enderror"
+                                    <label class="font-weight-bold" for="from">Pickup timing from: </label>
+                                    <input required type="text" class="form-control mb @error('from') is-invalid @enderror"
                                            placeholder="From" name="from" value="{{ old('from') }}">
                                     @error('from')
                                     <span class="invalid-feedback" role="alert">
@@ -688,8 +688,8 @@
                                     @enderror
                                 </div>
                                 <div class="col-md-6 col-sm-6">
-                                    <label for="to">To: </label>
-                                    <input type="text" class="form-control mb @error('to') is-invalid @enderror"
+                                    <label class="font-weight-bold" for="to">To: </label>
+                                    <input required type="text" class="form-control mb @error('to') is-invalid @enderror"
                                            placeholder="To" name="to" value="{{ old('to') }}">
                                     @error('to')
                                     <span class="invalid-feedback" role="alert">
@@ -702,8 +702,8 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label for="facility">Daycare facility started from: </label>
-                                    <input type="text" class="form-control mb @error('facility') is-invalid @enderror"
+                                    <label class="font-weight-bold" for="facility">Daycare facility started from: </label>
+                                    <input required type="text" class="form-control mb @error('facility') is-invalid @enderror"
                                            placeholder="Your daycare facility" name="facility" value="{{ old('facility') }}">
                                     @error('facility')
                                     <span class="invalid-feedback" role="alert">
@@ -726,7 +726,7 @@
 
 
                             <div class="form-group text-center">
-                                <input type="submit" value="Send Message" class="btn btn-primary">
+                                <input type="submit" value="Submit Form" class="btn btn-primary">
                             </div>
                         </form>
                     </div>
