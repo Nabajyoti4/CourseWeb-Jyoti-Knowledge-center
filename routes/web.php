@@ -113,3 +113,9 @@ Route::get('admin/courses/edit/{id}', [\App\Http\Controllers\Admin\CourseControl
 
 Route::patch('admin/courses/update/{id}', [\App\Http\Controllers\Admin\CourseController::class, 'update'])
     ->middleware(['auth'])->name('admin.courses.update');
+
+
+//storage link
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
+});
