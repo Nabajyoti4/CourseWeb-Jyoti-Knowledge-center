@@ -34,6 +34,7 @@
                         <th>Cover</th>
                         <th>Form</th>
                         <th>Edit</th>
+                        <td>Delete</td>
                     </tr>
                     </thead>
                     <tbody id="data">
@@ -43,6 +44,12 @@
                             <td><img style="height: 200px; width: 200px; background-size: cover;" alt="" src="{{asset('storage/'.$course->image)}}"></td>
                             <td><a href="{{asset('storage/'.$course->form)}}" target="_blank">Pdf Form</a></td>
                             <td><a href="{{route('admin.courses.edit', $course->id)}}" class="genric-btn success circle">Edit</a></td>
+                            <td>
+                                <form action="{{route('admin.course.delete', $course->id)}}" method="post">
+                                    @csrf
+                                    @method('delete')
+                                    <button class="btn btn-danger rounded-lg" type="submit">Delete</button>
+                                </form></td>
                         </tr>
                     @empty
                         <tr>

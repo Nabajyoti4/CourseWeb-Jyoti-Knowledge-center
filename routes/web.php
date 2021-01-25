@@ -63,6 +63,11 @@ Route::post('/form-one/store', [\App\Http\Controllers\FormFourController::class,
     ->name('from-one.store');
 
 
+/**
+ * Add query
+ */
+Route::post('/query/store/', [\App\Http\Controllers\CourseController::class, 'query_store'])
+    ->name('query.store');
 
 require __DIR__.'/auth.php';
 
@@ -113,6 +118,14 @@ Route::get('admin/courses/edit/{id}', [\App\Http\Controllers\Admin\CourseControl
 
 Route::patch('admin/courses/update/{id}', [\App\Http\Controllers\Admin\CourseController::class, 'update'])
     ->middleware(['auth'])->name('admin.courses.update');
+
+Route::delete('admin/course/delete/{id}', [\App\Http\Controllers\Admin\CourseController::class, 'delete'])
+    ->middleware(['auth'])->name('admin.course.delete');
+
+
+// query
+Route::get('admin/query/index', [\App\Http\Controllers\Admin\QueryController::class, 'index'])
+    ->middleware(['auth'])->name('admin.query.index');
 
 
 //storage link

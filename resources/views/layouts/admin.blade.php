@@ -46,7 +46,7 @@
                 <!-- <i class="fas fa-laugh-wink"></i> -->
                 <i class="fas fa-chalkboard-teacher"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">Admin Panel</div>
+            <div class="sidebar-brand-text mx-3">JYOTI KNOWLEDGE CENTER</div>
         </a>
 
         <!-- Divider -->
@@ -68,7 +68,7 @@
         <!-- Divider -->
         <hr class="sidebar-divider">
             <div class="sidebar-heading">
-            Addons
+            Tabs
         </div>
         <!-- Nav Item - Pages Collapse Menu -->
 {{--            <li class="nav-item">--}}
@@ -97,6 +97,11 @@
 {{--            </div>--}}
 {{--        </li>--}}
         <hr class="sidebar-divider">
+              <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.query.index')}}">
+                <i class="fas fa-book-medical"></i>
+                <span>Query</span></a>
+        </li>
        <li class="nav-item">
             <a class="nav-link" href="{{route('admin.courses.index')}}">
                 <i class="fas fa-book-medical"></i>

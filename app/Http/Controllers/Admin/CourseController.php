@@ -80,4 +80,14 @@ class CourseController extends Controller
             ->with('success', 'Course Updated');
 
     }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function delete($id){
+        Course::findOrFail($id)->delete();
+        return redirect()->back()
+            ->with('success', 'Course Deleted');
+    }
 }

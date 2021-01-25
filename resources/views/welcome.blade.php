@@ -9,6 +9,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <script src="{{asset('js/sweetalert2.min.js')}}"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -492,7 +493,16 @@
 <body>
 <!-- Links -->
 @include('partials.navbar')
-
+@if ($message = Session::get('success'))
+    <script>
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: '{{$message}}',
+            showConfirmButton: true,
+        })
+    </script>
+@endif
 <div id="carouselExampleCaptions" class="carousel carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -649,7 +659,8 @@
 
                 <div class="col-lg-12 mt-5 pl-5 pr-5 mt-lg-0">
 
-                    <form method="post" role="form" class="php-email-form">
+                    <form method="post" action="{{route('query.store')}}" role="form" class="php-email-form">
+                        @csrf
                         <div class="form-row">
                             <div class="col-md-6 form-group">
                                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
