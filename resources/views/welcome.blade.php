@@ -631,7 +631,7 @@
                 @foreach($courses as $course)
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 ">
                     <div class="course-item shadow">
-                        <img src="{{asset('storage/'.$course->image)}}" class="img-fluid" alt="...">
+                        <img style="background-size:cover; height: 300px; width: 300px" src="{{asset('storage/'.$course->image)}}" class="img-fluid" alt="...">
                         <div class="course-content">
                             <h3><a href="{{route('course', $course->id)}}">{{$course->title}}</a></h3>
                             <p style="height: 60px;line-height: 20px; overflow: hidden">{{$course->description}}</p>

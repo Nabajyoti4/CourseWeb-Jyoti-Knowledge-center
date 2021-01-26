@@ -130,7 +130,7 @@
         </div>
         <div class="row">
             <div class="col-lg-8">
-                <img src="{{asset('storage/'.$course->image)}}" class="img-fluid" alt="">
+                <img style="background-size:cover; height: 400px; width: 1000px" src="{{asset('storage/'.$course->image)}}" class="img-fluid" alt="">
                 <h3>{{$course->title}}</h3>
                 <p>
                     {{$course->description}}
